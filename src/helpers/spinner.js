@@ -1,19 +1,25 @@
 import React from 'react'
 import Spinner from 'components/spinner'
 
-let element
+let timer, element
 
 export default {
-  start (props) {
-    element = document.createElement('div')
-    document.body.appendChild(element)
-    React.render(<Spinner {...props}/>, element)
-    document.body.classList.toggle('has-modal')
+  start (props = {}) {
+    timer = setTimeout(() => {
+      element = document.createElement('div')
+      document.body.appendChild(element)
+      React.render(<Spinner {...props}/>, element)
+      document.body.classList.toggle('has-modal')
+    }, 1000)
   },
 
   stop () {
-    React.unmountComponentAtNode(element)
-    document.body.removeChild(element)
-    document.body.classList.toggle('has-modal')
+    if (element) {
+      React.unmountComponentAtNode(element)
+      document.body.removeChild(element)
+      document.body.classList.toggle('has-modal')
+    }
+
+    clearTimeout(timer)
   }
 }
