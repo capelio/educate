@@ -44,9 +44,9 @@ export default React.createClass({
         } else {
           spinner.stop()
 
-          student.profileImage = res.body.filename + extension
-
           student.save({
+            profileImage: res.body.filename + extension
+          }, {
             wait: true,
 
             error () {
