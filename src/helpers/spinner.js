@@ -4,10 +4,10 @@ import Spinner from 'components/spinner'
 let element
 
 export default {
-  start () {
+  start (props) {
     element = document.createElement('div')
     document.body.appendChild(element)
-    React.render(<Spinner/>, element)
+    React.render(<Spinner {...props}/>, element)
     document.body.classList.toggle('has-modal')
   },
 
