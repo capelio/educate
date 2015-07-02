@@ -15,8 +15,6 @@ export default React.createClass({
 
     return (
       <div className='students-page'>
-        <h1>Students Page</h1>
-
         {students.map(student =>
           <StudentSummary key={student.id} student={student}/>
         )}

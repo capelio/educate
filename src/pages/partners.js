@@ -15,8 +15,6 @@ export default React.createClass({
 
     return (
       <div className='partners-page'>
-        <h1>Partners Page</h1>
-
         <p>
           <a href='/students/create' className='button'><span className='octicon octicon-plus'></span> Add New Student</a>
         </p>
