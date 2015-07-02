@@ -13,7 +13,7 @@ export default {
 
   stop () {
     React.unmountComponentAtNode(element)
-    document.body.classList.toggle('has-modal')
     document.body.removeChild(element)
+    document.body.classList.toggle('has-modal')
   }
 }
