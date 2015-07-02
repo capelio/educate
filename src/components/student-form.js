@@ -2,6 +2,7 @@ import app from 'ampersand-app'
 import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
 import spinner from 'helpers/spinner'
+import modal from 'helpers/modal'
 import types from 'helpers/prop-types'
 
 export default React.createClass({
@@ -28,6 +29,8 @@ export default React.createClass({
     spinner.start()
 
     student.save(this.state, {
+      wait: true,
+
       success () {
         spinner.stop()
         app.router.navigate('/students/' + student.id)
@@ -35,7 +38,11 @@ export default React.createClass({
 
       error () {
         spinner.stop()
-        console.error('Error saving student to server')
+
+        modal.open({
+          title: 'Error',
+          body: 'We encountered an error while creating the new student. Please wait a few minutes and try again. If the problem persists, please contact support.'
+        })
       }
     })
   },

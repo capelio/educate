@@ -2,6 +2,7 @@ import app from 'ampersand-app'
 import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
 import request from 'superagent'
+import modal from 'helpers/modal'
 import spinner from 'helpers/spinner'
 import types from 'helpers/prop-types'
 
@@ -36,16 +37,23 @@ export default React.createClass({
         if (err) {
           spinner.stop()
 
-          console.error(err)
+          modal.open({
+            title: 'Error',
+            body: 'We encountered an error while uploading the new profile image. Please wait a few minutes and try again. If the problem persists, please contact support.'
+          })
         } else {
           spinner.stop()
 
           student.profileImage = res.body.filename + extension
 
           student.save({
+            wait: true,
+
             error () {
-              // TODO: what error details are available here?
-              console.error('Error saving profileImageUrl to server')
+              modal.open({
+                title: 'Error',
+                body: 'We encountered an error while updating the student. Please wait a few minutes and try again. If the problem persists, please contact support.'
+              })
             }
           })
         }

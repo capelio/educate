@@ -9,6 +9,7 @@ import StudentDetailsPage from 'pages/student-details'
 import StudentFormPage from 'pages/student-form'
 import MessagePage from 'pages/message'
 import Student from 'models/student'
+import modal from 'helpers/modal'
 
 export default Router.extend({
   renderPage (page, opts = {layout: true}) {
@@ -45,8 +46,10 @@ export default Router.extend({
   viewStudent (id) {
     app.students.getOrFetch(id, (err, student) => {
       if (err) {
-        // TODO: Show error page/modal
-        console.log('Error getting student details')
+        modal.open({
+          title: 'Error',
+          body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problems persists, please contat support.'
+        })
       } else {
         this.renderPage(<StudentDetailsPage student={student} isPartner={app.me.isPartner}/>)
       }
@@ -56,8 +59,10 @@ export default Router.extend({
   editStudent (id) {
     app.students.getOrFetch(id, (err, student) => {
       if (err) {
-        // TODO: Show error page/modal
-        console.log('Error getting student details')
+        modal.open({
+          title: 'Error',
+          body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problems persists, please contat support.'
+        })
       } else {
         this.renderPage(<StudentFormPage student={student}/>)
       }
