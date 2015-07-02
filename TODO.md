@@ -2,9 +2,6 @@
 
 ## NEXT
 
-- add spinner to admin bar deactivate
-- only show spinner if it's taken more than 1 second
-- remove X Page titles
 - resize spinner in portrait on phone
 - why doesn't image reload on phone after upload?
 - fix page not found when loading students/:id page
@@ -13,6 +10,8 @@
 ## LATER
 
 - add donation flows
+- fix forceUpdate() warnings when editing a student
+- delete student's old profile image when updated
 - improve flow when encountering an error when viewing students/:id in the case when visiting the direct link (i.e. going from google.com to the students/:id page)
 - show stack trace in error modal using 'Advanced' expansion approach. show HTTP response codes, etc, as well
 - improve the classes = canEdit logic in comp/profile-image render()
@@ -34,6 +33,9 @@
 - add spinner to all ajax calls, etc
 - remove donation bits
 - use a modal instead of console.error in the client
+- add spinner to admin bar deactivate
+- only show spinner if it's taken more than 1 second
+- remove X Page titles
 
 ### 2015-07-01
 
