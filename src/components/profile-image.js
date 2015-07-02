@@ -42,14 +42,18 @@ export default React.createClass({
             body: 'We encountered an error while uploading the new profile image. Please wait a few minutes and try again. If the problem persists, please contact support.'
           })
         } else {
-          spinner.stop()
-
           student.save({
             profileImage: res.body.filename + extension
           }, {
             wait: true,
 
+            success () {
+              spinner.stop()
+            },
+
             error () {
+              spinner.stop()
+
               modal.open({
                 title: 'Error',
                 body: 'We encountered an error while updating the student. Please wait a few minutes and try again. If the problem persists, please contact support.'
