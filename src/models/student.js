@@ -10,6 +10,8 @@ export default Model.extend({
     id: 'string',
     name: 'string',
     story: 'string',
+    goal: 'number',
+
     profileImage: {
       type: 'string',
       default: 'default-profile-image.png'

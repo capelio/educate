@@ -1,6 +1,6 @@
 import React from 'react'
 
-const {object, shape, string} = React.PropTypes
+const {number, object, shape, string} = React.PropTypes
 
 export default {
   student: shape({
@@ -8,6 +8,7 @@ export default {
     name: string,
     story: string,
     profileImage: string,
+    goal: number,
     addUrl: string,
     editUrl: string,
     profileImageUrl: string

@@ -13,9 +13,10 @@ export default React.createClass({
   },
 
   getInitialState () {
-    const {name, story} = this.props.student
+    const {goal, name, story} = this.props.student
 
     return {
+      goal,
       name,
       story
     }
@@ -51,6 +52,14 @@ export default React.createClass({
     window.history.back()
   },
 
+  onGoalChange (event) {
+    const goal = parseInt(event.target.value, 10)
+
+    this.setState({
+      goal
+    })
+  },
+
   onNameChange (event) {
     this.setState({
       name: event.target.value
@@ -64,7 +73,7 @@ export default React.createClass({
   },
 
   render () {
-    const {name, story} = this.state
+    const {goal, name, story} = this.state
 
     return (
       <form onSubmit={this.onSubmitForm}>
@@ -74,6 +83,11 @@ export default React.createClass({
           <div className='form-element'>
             <label htmlFor='name'>Name</label>
             <input className='form-input' value={name} onChange={this.onNameChange} type='text' id='name' placeholder='Full name' required/>
+          </div>
+
+          <div className='form-element'>
+            <label htmlFor='goal'>Goal</label>
+            <input className='form-input' value={goal} onChange={this.onGoalChange} type='text' id='goal' placeholder='Fundraising goal' required/>
           </div>
 
           <div className='form-element'>
