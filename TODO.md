@@ -27,6 +27,9 @@
 
 ## DONE
 
+### 2015-07-03
+- add 200.html to support deep linking
+
 ### 2015-07-02
 
 - push to Git
