@@ -3,15 +3,15 @@ import Spinner from 'spin.js'
 
 export default React.createClass({
   componentDidMount () {
-    this.spinner = new Spinner()
-    this.spinner.spin(React.findDOMNode(this.refs.spinnerContainer))
+    this.spinner = new Spinner({
+      className: 'spinjs-spinner'
+    })
+    this.spinner.spin(React.findDOMNode(this.refs.container))
   },
 
   render () {
     return (
-      <div className='spinner modal modal-no-sections'>
-        <p ref='spinnerContainer'></p>
-      </div>
+      <div className='spinner' ref='container'></div>
     )
   }
 })
