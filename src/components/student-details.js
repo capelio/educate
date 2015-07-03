@@ -19,7 +19,7 @@ export default React.createClass({
     const {isPartner} = app.me
 
     return (
-      <div className='student-details, grid-flex-container'>
+      <div className='student-details grid-flex-container'>
         <div className='grid-flex-cell'>
           <h3 className='student-details_name'>
             <a href={student.appUrl}>{student.name}</a>
