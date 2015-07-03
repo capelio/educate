@@ -2,14 +2,13 @@
 
 ## NEXT
 
-- resize spinner in portrait on phone
+- collapse menu after selection
+- add donation flows
 - why doesn't image reload on phone after upload?
-- fix page not found when loading students/:id page
 - convert API to ES6 using Babel
 
 ## LATER
 
-- add donation flows
 - fix forceUpdate() warnings when editing a student
 - delete student's old profile image when updated
 - improve flow when encountering an error when viewing students/:id in the case when visiting the direct link (i.e. going from google.com to the students/:id page)
@@ -29,6 +28,10 @@
 
 ### 2015-07-03
 - add 200.html to support deep linking
+- fix page not found when loading students/:id page
+- put profileImage styles into their own file
+- put spinner styles into their own file
+- resize spinner in portrait on phone
 
 ### 2015-07-02
 
