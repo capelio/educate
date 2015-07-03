@@ -10,10 +10,11 @@ export default React.createClass({
 
   render () {
     const {raised, goal} = this.props
+    const toGo = goal - raised
 
     return (
       <div className='funding-progress'>
-        <p>${raised} raised, ${goal} to go</p>
+        <p>${raised} raised, ${toGo} to go</p>
       </div>
     )
   }
