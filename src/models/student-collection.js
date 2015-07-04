@@ -3,9 +3,9 @@ import Collection from 'ampersand-rest-collection'
 import Student from 'models/student'
 
 export default Collection.extend({
+  model: Student,
+
   url () {
     return app.config.apiRoot + '/students'
-  },
-
-  model: Student
+  }
 })

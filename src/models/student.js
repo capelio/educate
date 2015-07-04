@@ -32,19 +32,19 @@ export default Model.extend({
       }
     },
 
-    editUrl: {
-      deps: ['id'],
-
-      fn () {
-        return '/students/' + this.id + '/edit'
-      }
-    },
-
     donateUrl: {
       deps: ['id'],
 
       fn () {
         return '/students/' + this.id + '/donate'
+      }
+    },
+
+    editUrl: {
+      deps: ['id'],
+
+      fn () {
+        return '/students/' + this.id + '/edit'
       }
     },
 

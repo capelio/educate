@@ -51,6 +51,7 @@ export default Router.extend({
 
   createStudent () {
     const student = new Student()
+
     this.renderPage(<StudentFormPage student={student}/>)
   },
 
