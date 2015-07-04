@@ -1,4 +1,4 @@
-import app from 'ampersand-app'
+// import app from 'ampersand-app'
 import React from 'react'
 import modal from 'helpers/modal'
 import spinner from 'helpers/spinner'
@@ -50,7 +50,7 @@ export default React.createClass({
   },
 
   render () {
-    const {name, profileImageUrl} = this.props.student
+    const {appUrl, name, profileImageUrl} = this.props.student
     const {amount} = this.state
 
     return (
@@ -66,7 +66,7 @@ export default React.createClass({
                 </div>
 
                 <button type='submit' className='button button-approve'>Donate</button>&nbsp;
-                <button onClick={this.onCancelClick} type='button' className='button button-neutral'>Cancel</button>
+                <a href={appUrl} className='button button-neutral'>Cancel</a>
               </fieldset>
             </form>
           </div>
