@@ -55,5 +55,10 @@ export default Model.extend({
         return app.config.imagesRoot + '/' + this.profileImage
       }
     }
+  },
+
+  fetch () {
+    Model.prototype.fetch.apply(this, arguments)
+    this.donations.fetch()
   }
 })
