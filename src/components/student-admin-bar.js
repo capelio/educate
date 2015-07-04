@@ -1,16 +1,14 @@
 import React from 'react'
+import ampersandMixin from 'ampersand-react-mixin'
 import modal from 'helpers/modal'
 import spinner from 'helpers/spinner'
-
-const {string, shape} = React.PropTypes
+import types from 'helpers/prop-types'
 
 export default React.createClass({
+  mixins: [ampersandMixin],
+
   propTypes: {
-    student: shape({
-      id: string,
-      name: string,
-      story: string
-    })
+    student: types.student
   },
 
   onDeactivateClick () {
