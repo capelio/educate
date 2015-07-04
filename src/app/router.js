@@ -7,6 +7,7 @@ import TeachersPage from 'pages/teachers'
 import PartnersPage from 'pages/partners'
 import StudentDetailsPage from 'pages/student-details'
 import StudentFormPage from 'pages/student-form'
+import DonationPage from 'pages/donation'
 import MessagePage from 'pages/message'
 import Student from 'models/student'
 import modal from 'helpers/modal'
@@ -30,6 +31,7 @@ export default Router.extend({
     'students/create': 'createStudent',
     'students/:id': 'viewStudent',
     'students/:id/edit': 'editStudent',
+    'students/:id/donate': 'donate',
     'teachers': 'teachers',
     '*path': 'notFound'
   },
@@ -65,6 +67,19 @@ export default Router.extend({
         })
       } else {
         this.renderPage(<StudentFormPage student={student}/>)
+      }
+    })
+  },
+
+  donate (id) {
+    app.students.getOrFetch(id, (err, student) => {
+      if (err) {
+        modal.open({
+          title: 'Error',
+          body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problems persists, please contat support.'
+        })
+      } else {
+        this.renderPage(<DonationPage student={student}/>)
       }
     })
   },
