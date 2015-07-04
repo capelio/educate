@@ -1,5 +1,6 @@
 import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
+
 import modal from 'helpers/modal'
 import spinner from 'helpers/spinner'
 import types from 'helpers/prop-types'
