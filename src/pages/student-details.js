@@ -16,6 +16,7 @@ export default React.createClass({
   render () {
     const {student} = this.props
     const canEdit = app.me.isPartner
+    const deactivateRedirect = '/partners'
 
     let content
 
@@ -23,7 +24,10 @@ export default React.createClass({
       content = (
         <div className='student-details-page'>
           <StudentDetails student={student}/>
-          <StudentAdminBar student={student}/>
+          <StudentAdminBar
+            deactivateRedirect={deactivateRedirect}
+            student={student}
+          />
         </div>
       )
     } else {

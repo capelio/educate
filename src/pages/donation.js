@@ -1,4 +1,4 @@
-// import app from 'ampersand-app'
+import app from 'ampersand-app'
 import React from 'react'
 import modal from 'helpers/modal'
 import spinner from 'helpers/spinner'
