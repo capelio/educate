@@ -1,5 +1,6 @@
 import app from 'ampersand-app'
 import Model from 'ampersand-model'
+import DonationCollection from 'models/donation-collection'
 
 export default Model.extend({
   urlRoot () {
@@ -16,6 +17,10 @@ export default Model.extend({
       type: 'string',
       default: 'default-profile-image.png'
     }
+  },
+
+  collections: {
+    donations: DonationCollection
   },
 
   derived: {
