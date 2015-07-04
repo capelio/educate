@@ -53,7 +53,7 @@ export default Router.extend({
           body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problems persists, please contat support.'
         })
       } else {
-        this.renderPage(<StudentDetailsPage student={student} isPartner={app.me.isPartner}/>)
+        this.renderPage(<StudentDetailsPage student={student}/>)
       }
     })
   },
