@@ -2,29 +2,46 @@
 
 ## NEXT
 
-- collapse menu after selection
-- add donation flows
-- why doesn't image reload on phone after upload?
-- convert API to ES6 using Babel
+- hook up Cancel button on donation page (return to student's profile)
+- fix issue when navigating partners -> edit -> save -> deactivate (change return location based on displayName of parent React component?)
+- make entire summary div a tap target for viewing student details
+- add login/logout flows
+- when creating new donation models, do 'studentId: this.parent.id' equiv instead of relying on the API to add it to JSON
+- figure out why image doesn't reload on phone after upload of large image files
+- fix error when: visit deep link student profile -> donate button -> donate $ -> return student profile, $ raised is wrong
 
 ## LATER
 
+- add validation for funding goal amount during create/update
+- add validation for donation amount on pages/donation
+- collapse menu after selection
 - fix forceUpdate() warnings when editing a student
-- delete student's old profile image when updated
-- improve flow when encountering an error when viewing students/:id in the case when visiting the direct link (i.e. going from google.com to the students/:id page)
+- remove the confusion! camelCase everything (JS, CSS, filenames, etc), too many exceptions to remember
+- delete student's old profile image when uploading a new one
+- improve flow when encountering an error viewing a deep link from another website (i.e. going from google.com to students/:id page)
 - show stack trace in error modal using 'Advanced' expansion approach. show HTTP response codes, etc, as well
-- improve the classes = canEdit logic in comp/profile-image render()
-- preserve paragraph formatting in student story textarea (WYSIWYG overkill?)
+- improve the classes = canEdit logic in components/profile-image render()
+- preserve paragraph formatting in student story textarea (is WYSIWYG overkill?)
 - update isPartner/canEdit check for profile images to only allow the partner who owns the student to edit the profile image
-- research image cropping and optimization process (SaaS avail?)
+- research image cropping and optimization process (SaaS avail? browser-side JS library?)
 - add validation to express endpoints, use a method that can be reused on the client (is there a way to unify React.PropTypes, Ampersand model definitions, Express param validation, etc?)
-- setup commit/tag GPG signing flows
 - replace confirm option in student deactivation flow with an Undo option
-- fix issue when navigating partners -> edit -> save -> deactivate (change return location based on displayName of parent React component?)
-- can we use a mixin to reuse our model props for propTypes?
-- look for or create a Upload ampersand model in a rest-collection
+- does it make sense to use an ampersand model for uploads? multiple uploaded images, files, etc, would need collections
+- can we add a check for className strings with commas in them to standard or another linter? (common mistake of className='one, two' instead of className='one two')
+- use a currency pretty formatter (commas, etc)
+- convert API to ES6 using Babel
+- setup commit/tag GPG signing flows
 
 ## DONE
+
+### 2015-07-04
+
+- add "make a donation" flow
+- add donation collection and model
+- persist donations
+- fetch student donations when getting students for the /students page
+- sum donations to calculate "raised" value for funding progress component
+- display donation progress on student details page
 
 ### 2015-07-03
 - add 200.html to support deep linking
@@ -32,6 +49,8 @@
 - put profileImage styles into their own file
 - put spinner styles into their own file
 - resize spinner in portrait on phone
+- add funding goal to student model and student create/edit flows
+- display funding progress in summary
 
 ### 2015-07-02
 
