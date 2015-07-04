@@ -1,6 +1,8 @@
 import app from 'ampersand-app'
 import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
+
+import FundingProgress from 'components/funding-progress'
 import ProfileImage from 'components/profile-image'
 import types from 'helpers/prop-types'
 
@@ -13,14 +15,21 @@ export default React.createClass({
 
   render () {
     const {student} = this.props
+    const {donations} = student
     const {isPartner} = app.me
 
     return (
-      <div key={student.id} className='student-summary, grid-flex-container'>
+      <div key={student.id} className='student-summary grid-flex-container'>
         <div className='grid-flex-cell'>
-          <h3>
+          <h3 className='student-summary_name'>
             <a href={student.appUrl}>{student.name}</a>
           </h3>
+
+          <FundingProgress
+            canDonate={false}
+            donations={donations}
+            student={student}
+          />
 
           <p>{student.story}</p>
         </div>
