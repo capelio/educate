@@ -10,6 +10,7 @@ export default {
     profileImage: string,
     goal: number,
     addUrl: string,
+    donateUrl: string,
     editUrl: string,
     profileImageUrl: string
   }),

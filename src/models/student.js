@@ -40,6 +40,14 @@ export default Model.extend({
       }
     },
 
+    donateUrl: {
+      deps: ['id'],
+
+      fn () {
+        return '/students/' + this.id + '/donate'
+      }
+    },
+
     profileImageUrl: {
       deps: ['profileImage'],
 
