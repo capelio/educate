@@ -69,14 +69,14 @@ export default React.createClass({
 
     let classes
     if (canEdit) {
-      classes = 'profileImage editable'
+      classes = 'profile-image editable'
     } else {
-      classes = 'profileImage'
+      classes = 'profile-image'
     }
 
     return (
       <div className={classes} onClick={this.onClick}>
-        <figure className='media-outlined'>
+        <figure className='profile-image_figure media-outlined'>
           <img src={student.profileImageUrl}/>
           <figcaption style={{display: canEdit ? 'block' : 'none'}}>Tap image to change</figcaption>
         </figure>
