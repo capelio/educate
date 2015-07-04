@@ -2,8 +2,6 @@
 
 ## NEXT
 
-- hook up Cancel button on donation page (return to student's profile)
-- fix issue when navigating partners -> edit -> save -> deactivate (change return location based on displayName of parent React component?)
 - make entire summary div a tap target for viewing student details
 - add login/logout flows
 - when creating new donation models, do 'studentId: this.parent.id' equiv instead of relying on the API to add it to JSON
@@ -42,6 +40,8 @@
 - fetch student donations when getting students for the /students page
 - sum donations to calculate "raised" value for funding progress component
 - display donation progress on student details page
+- hook up Cancel button on donation page (return to student's profile)
+- fix issue when navigating partners -> edit -> save -> deactivate (make the redirectUrl configurable)
 
 ### 2015-07-03
 - add 200.html to support deep linking
