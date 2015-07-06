@@ -4,6 +4,7 @@ import Router from 'ampersand-router'
 
 import Layout from 'app/layout'
 import DonationPage from 'pages/donation'
+import HowItWorksPage from 'pages/how-it-works'
 import MessagePage from 'pages/message'
 import PartnersPage from 'pages/partners'
 import StudentDetailsPage from 'pages/student-details'
@@ -28,6 +29,7 @@ export default Router.extend({
 
   routes: {
     '': 'students',
+    'howitworks': 'howItWorks',
     'partners': 'partners',
     'students/create': 'createStudent',
     'students/:id': 'viewStudent',
@@ -35,6 +37,10 @@ export default Router.extend({
     'students/:id/donate': 'donate',
     'teachers': 'teachers',
     '*path': 'notFound'
+  },
+
+  howItWorks () {
+    this.renderPage(<HowItWorksPage/>)
   },
 
   students () {
