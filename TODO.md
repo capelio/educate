@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- change donation amount label from Name to Amount
 - upgrade prod server to 15.04
 - setup hourly backup for prod data
 - add login/logout flows
@@ -45,6 +44,7 @@
 - use Empower Nepal as temporary branding
 - make story textarea larger
 - fix NaN error when editing a student
+- change donation amount label from Name to Amount
 
 ### 2015-07-04
 

@@ -61,7 +61,7 @@ export default React.createClass({
             <form onSubmit={this.onSubmitForm}>
               <fieldset>
                 <div className='form-element'>
-                  <label htmlFor='amount'>Name</label>
+                  <label htmlFor='amount'>Amount</label>
                   <input className='form-input' value={amount} onChange={this.onAmountChange} type='text' id='amount' placeholder='Amount' required/>
                 </div>
 
