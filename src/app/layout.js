@@ -17,8 +17,7 @@ export default React.createClass({
             <li>Empower Nepal</li>
             <li><a href='/'>Students in Need</a></li>
             <li><a href='/howitworks'>How it Works</a></li>
-            <li><a href='/partners'>Partners</a></li>
-            <li><a href='/teachers'>Teachers</a></li>
+            <li><a href='/signin'>Sign In</a></li>
           </ul>
         </nav>
 

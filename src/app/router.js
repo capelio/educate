@@ -7,6 +7,7 @@ import DonationPage from 'pages/donation'
 import HowItWorksPage from 'pages/how-it-works'
 import MessagePage from 'pages/message'
 import PartnersPage from 'pages/partners'
+import SignInPage from 'pages/sign-in'
 import StudentDetailsPage from 'pages/student-details'
 import StudentFormPage from 'pages/student-form'
 import StudentsPage from 'pages/students'
@@ -31,6 +32,7 @@ export default Router.extend({
     '': 'students',
     'howitworks': 'howItWorks',
     'partners': 'partners',
+    'signin': 'signIn',
     'students/create': 'createStudent',
     'students/:id': 'viewStudent',
     'students/:id/edit': 'editStudent',
@@ -41,6 +43,10 @@ export default Router.extend({
 
   howItWorks () {
     this.renderPage(<HowItWorksPage/>)
+  },
+
+  signIn () {
+    this.renderPage(<SignInPage/>)
   },
 
   students () {
