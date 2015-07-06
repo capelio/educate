@@ -54,7 +54,8 @@ export default React.createClass({
   },
 
   onGoalChange (event) {
-    const goal = parseInt(event.target.value, 10)
+    let goal = event.target.value.slice(1)
+    goal = parseInt(goal, 10)
 
     this.setState({
       goal
@@ -76,6 +77,8 @@ export default React.createClass({
   render () {
     const {goal, name, story} = this.state
 
+    let prettyGoal = '$' + (goal ? goal : '')
+
     return (
       <form className='student-form' onSubmit={this.onSubmitForm}>
         <fieldset>
@@ -88,7 +91,7 @@ export default React.createClass({
 
           <div className='form-element'>
             <label htmlFor='goal'>Goal</label>
-            <input className='form-input' value={goal} onChange={this.onGoalChange} type='text' id='goal' placeholder='Fundraising goal' required/>
+            <input className='form-input' value={prettyGoal} onChange={this.onGoalChange} type='text' id='goal' placeholder='Fundraising goal' required/>
           </div>
 
           <div className='form-element'>

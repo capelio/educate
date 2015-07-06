@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- fix NaN error when editing a student
 - setup hourly backup for prod data
 - add login/logout flows
 - add How it Works page
@@ -43,6 +42,7 @@
 
 - use Empower Nepal as temporary branding
 - make story textarea larger
+- fix NaN error when editing a student
 
 ### 2015-07-04
 
