@@ -2,6 +2,8 @@
 
 ## NEXT
 
+- change donation amount label from Name to Amount
+- upgrade prod server to 15.04
 - setup hourly backup for prod data
 - add login/logout flows
 - add How it Works page
