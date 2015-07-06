@@ -15,7 +15,7 @@ export default React.createClass({
 
           <ul className='list-unstyled list-inline cf'>
             <li>Empower Nepal</li>
-            <li><a href='/'>Students</a></li>
+            <li><a href='/'>Students in Need</a></li>
             <li><a href='/partners'>Partners</a></li>
             <li><a href='/teachers'>Teachers</a></li>
           </ul>
