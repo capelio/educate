@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- use Empower Nepal as temporary branding
 - make story textarea larger
 - fix NaN error when editing a student
 - setup hourly backup for prod data
@@ -40,6 +39,10 @@
 - use "donate for X years of education" messaging
 
 ## DONE
+
+### 2015-07-06
+
+- use Empower Nepal as temporary branding
 
 ### 2015-07-04
 
