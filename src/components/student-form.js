@@ -77,7 +77,7 @@ export default React.createClass({
     const {goal, name, story} = this.state
 
     return (
-      <form onSubmit={this.onSubmitForm}>
+      <form className='student-form' onSubmit={this.onSubmitForm}>
         <fieldset>
           <legend>Student Details</legend>
 
