@@ -2,8 +2,15 @@
 
 ## NEXT
 
-- make entire summary div a tap target for viewing student details
+- use Empower Nepal as temporary branding
+- make story textarea larger
+- fix NaN error when editing a student
+- setup hourly backup for prod data
 - add login/logout flows
+- add How it Works page
+- add Organizations page (mission, updates, etc)
+- figure out how to model case studies for students
+- make entire summary div a tap target for viewing student details
 - when creating new donation models, do 'studentId: this.parent.id' equiv instead of relying on the API to add it to JSON
 - figure out why image doesn't reload on phone after upload of large image files
 - fix error when: visit deep link student profile -> donate button -> donate $ -> return student profile, $ raised is wrong
@@ -29,6 +36,8 @@
 - use a currency pretty formatter (commas, etc)
 - convert API to ES6 using Babel
 - setup commit/tag GPG signing flows
+- add universal and recurring donations
+- use "donate for X years of education" messaging
 
 ## DONE
 
