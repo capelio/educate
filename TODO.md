@@ -2,11 +2,11 @@
 
 ## NEXT
 
-- upgrade prod server to 15.04
-- setup hourly backup for prod data
+- restart pm2 and dropbox on server restart
 - add login/logout flows
-- add How it Works page
 - add Organizations page (mission, updates, etc)
+- when focusing Goal field on student form, place cursor at end of $
+- add $ pretty format to donate form, do focus trick as well
 - figure out how to model case studies for students
 - make entire summary div a tap target for viewing student details
 - when creating new donation models, do 'studentId: this.parent.id' equiv instead of relying on the API to add it to JSON
@@ -38,6 +38,15 @@
 - use "donate for X years of education" messaging
 
 ## DONE
+
+### 2015-07-13
+
+- add How it Works page
+
+### 2015-07-08
+
+- upgrade prod server to 15.04
+- setup hourly backup for prod data
 
 ### 2015-07-06
 
