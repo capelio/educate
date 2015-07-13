@@ -15,7 +15,6 @@ export default React.createClass({
 
   render () {
     const {student} = this.props
-    const {donations} = student
     const {isPartner} = app.me
 
     return (
@@ -27,7 +26,7 @@ export default React.createClass({
 
           <FundingProgress
             canDonate={true}
-            donations={donations}
+            donations={student.donations}
             student={student}
           />
 
