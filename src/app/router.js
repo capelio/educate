@@ -50,14 +50,11 @@ export default Router.extend({
   },
 
   students () {
-    const {students} = app
-
-    // TODO: find a better way to get donations for each student
-    students.fetch({
+    app.students.fetch({
       success: () => {
-        students.each(d => d.donations.fetch())
+        app.students.each(s => s.donations.fetch())
 
-        this.renderPage(<StudentsPage students={students}/>)
+        this.renderPage(<StudentsPage students={app.students}/>)
       }
     })
   },
@@ -108,9 +105,7 @@ export default Router.extend({
   },
 
   partners () {
-    const {students} = app
-
-    this.renderPage(<PartnersPage students={students}/>)
+    this.renderPage(<PartnersPage students={app.students}/>)
   },
 
   teachers () {

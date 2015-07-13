@@ -2,11 +2,9 @@ import app from 'ampersand-app'
 import React from 'react'
 import localLinks from 'local-links'
 
-const {array} = React.PropTypes
-
 export default React.createClass({
   propTypes: {
-    children: array
+    children: React.PropTypes.array
   },
 
   onClick (event) {
