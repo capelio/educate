@@ -69,9 +69,7 @@ export default Router.extend({
   },
 
   viewStudent (id) {
-    const {students} = app
-
-    students.getOrFetch(id, (err, student) => {
+    app.students.fetchById(id, (err, student) => {
       if (err) {
         modal.open({
           title: 'Error',
@@ -84,9 +82,7 @@ export default Router.extend({
   },
 
   editStudent (id) {
-    const {students} = app
-
-    students.getOrFetch(id, (err, student) => {
+    app.students.fetchById(id, (err, student) => {
       if (err) {
         modal.open({
           title: 'Error',
@@ -99,9 +95,7 @@ export default Router.extend({
   },
 
   donate (id) {
-    const {students} = app
-
-    students.getOrFetch(id, (err, student) => {
+    app.students.fetchById(id, (err, student) => {
       if (err) {
         modal.open({
           title: 'Error',
