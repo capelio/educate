@@ -26,7 +26,7 @@ export default React.createClass({
         success: () => {
           spinner.stop()
 
-          app.router.navigate(this.props.deactivateRedirect)
+          app.router.history.navigate(this.props.deactivateRedirect)
         },
 
         error () {

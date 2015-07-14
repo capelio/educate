@@ -35,7 +35,7 @@ export default React.createClass({
 
       success () {
         spinner.stop()
-        app.router.navigate('/students/' + student.id)
+        app.router.history.navigate('/students/' + student.id)
       },
 
       error () {

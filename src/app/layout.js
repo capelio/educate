@@ -40,7 +40,7 @@ export default React.createClass({
      */
     app.me.unset('token', {silent: true})
 
-    app.router.navigate('/')
+    app.router.history.navigate('/')
   },
 
   render () {

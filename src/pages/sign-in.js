@@ -49,7 +49,7 @@ export default React.createClass({
           })
         } else {
           app.me.token = res.body.token
-          app.router.navigate('/dashboard')
+          app.router.history.navigate('/dashboard')
         }
       })
   },
