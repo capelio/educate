@@ -6,5 +6,12 @@ export default Model.extend(tokenMixin, {
     id: 'string',
     studentId: 'string',
     amount: 'number'
+  },
+
+  session: {
+    editing: {
+      type: 'boolean',
+      default: false
+    }
   }
 })
