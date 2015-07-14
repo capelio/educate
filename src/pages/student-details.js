@@ -15,12 +15,12 @@ export default React.createClass({
 
   render () {
     const {student} = this.props
-    const canEdit = app.me.isPartner
+    const {isAuthenticated} = app.me
     const deactivateRedirect = '/dashboard'
 
     let content
 
-    if (canEdit) {
+    if (isAuthenticated) {
       content = (
         <div className='student-details-page'>
           <StudentDetails student={student}/>

@@ -3,7 +3,6 @@
 ## NEXT
 
 - restart pm2 and dropbox on server restart
-- change isPartner/canEdit checks to look for app.me.token, remove app.me.isPartner
 - fix bug when submitting empty signin form
 - add Organizations page (mission, updates, etc)
 - when focusing Goal field on student form, place cursor at end of $
@@ -52,6 +51,7 @@
 - remove Teachers page and route
 - change appUrl to viewUrl
 - change instances of app.router.navigate to app.router.history.navigate
+- change isPartner/canEdit checks to look for app.me.token, remove app.me.isPartner
 
 ### 2015-07-08
 

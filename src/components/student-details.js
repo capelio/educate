@@ -15,7 +15,7 @@ export default React.createClass({
 
   render () {
     const {student} = this.props
-    const {isPartner} = app.me
+    const {isAuthenticated} = app.me
 
     return (
       <div className='student-details grid-flex-container'>
@@ -34,7 +34,7 @@ export default React.createClass({
         </div>
 
         <div className='grid-flex-cell grid-flex-cell-1of4'>
-          <ProfileImage student={student} canEdit={isPartner}/>
+          <ProfileImage student={student} canEdit={isAuthenticated}/>
         </div>
       </div>
     )

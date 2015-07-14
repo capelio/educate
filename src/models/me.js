@@ -13,11 +13,16 @@ export default Model.extend(tokenMixin, {
   props: {
     id: 'number',
     name: 'string',
-    token: 'string',
+    token: 'string'
+  },
 
-    isPartner: {
-      type: 'boolean',
-      default: true
+  derived: {
+    isAuthenticated: {
+      deps: ['token'],
+
+      fn () {
+        return !!this.token
+      }
     }
   },
 
