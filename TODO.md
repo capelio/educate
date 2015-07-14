@@ -3,7 +3,6 @@
 ## NEXT
 
 - restart pm2 and dropbox on server restart
-- add login/logout flows
 - add Organizations page (mission, updates, etc)
 - when focusing Goal field on student form, place cursor at end of $
 - add $ pretty format to donate form, do focus trick as well
@@ -42,6 +41,7 @@
 ### 2015-07-13
 
 - add How it Works page
+- add login/logout flows
 - rename Partner page to Dashboard, update all links to /partners
 - remove Teachers page and route
 

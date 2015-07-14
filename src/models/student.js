@@ -1,8 +1,9 @@
 import app from 'ampersand-app'
 import Model from 'ampersand-model'
 import DonationCollection from 'models/donation-collection'
+import tokenMixin from 'helpers/token-mixin'
 
-export default Model.extend({
+export default Model.extend(tokenMixin, {
   urlRoot () {
     return app.config.apiRoot + '/students'
   },

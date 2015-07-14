@@ -14,6 +14,16 @@ import StudentsPage from 'pages/students'
 import Student from 'models/student'
 import modal from 'helpers/modal'
 
+function auth (handler) {
+  return function () {
+    if (app.me.token) {
+      this[handler].apply(this, arguments)
+    } else {
+      this.redirectTo('/signin')
+    }
+  }
+}
+
 export default Router.extend({
   renderPage (page, opts = {layout: true}) {
     if (opts.layout) {
@@ -29,12 +39,12 @@ export default Router.extend({
 
   routes: {
     '': 'students',
-    'dashboard': 'dashboard',
+    'dashboard': auth('dashboard'),
     'howitworks': 'howItWorks',
     'signin': 'signIn',
-    'students/create': 'createStudent',
+    'students/create': auth('createStudent'),
     'students/:id': 'viewStudent',
-    'students/:id/edit': 'editStudent',
+    'students/:id/edit': auth('editStudent'),
     'students/:id/donate': 'donate',
     '*path': 'notFound'
   },
