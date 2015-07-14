@@ -2,16 +2,26 @@
 
 ## NEXT
 
-- restart pm2 and dropbox on server restart
+- change image tap action to view fullscreen image
+- add Change Image button below image for organizations
+- allow organizations to manually add/edit/archive donations
+- change deactivate student to archive student
+- update db calls to exclude archived students unless explicitly asked for
+- add/edit/archive student case studies
+- add student/organization relationship to student creation and db process
+- only display organization students on dashboard
+- view archived students
+- add expenses page for organizations
+- list students and expenses on organization dashboard
+- add Organizations pages (mission, updates, etc) using Org entered copy (Org settings page?)
 - fix bug when submitting empty signin form
-- add Organizations page (mission, updates, etc)
 - when focusing Goal field on student form, place cursor at end of $
 - add $ pretty format to donate form, do focus trick as well
-- figure out how to model case studies for students
 - make entire summary div a tap target for viewing student details
 - when creating new donation models, do 'studentId: this.parent.id' equiv instead of relying on the API to add it to JSON
 - figure out why image doesn't reload on phone after upload of large image files
 - fix error when: visit deep link student profile -> donate button -> donate $ -> return student profile, $ raised is wrong
+- restart pm2 and dropbox on server restart
 
 ## LATER
 
