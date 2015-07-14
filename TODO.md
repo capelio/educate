@@ -2,6 +2,9 @@
 
 ## NEXT
 
+- fix issue with admin bar functions still avail after signout
+- change layout's signedIn method to use app.me.isAuthenticated
+- preserve paragraph formatting in student story textarea (is WYSIWYG overkill?)
 - change image tap action to view fullscreen image
 - add Change Image button below image for organizations
 - allow organizations to manually add/edit/archive donations
@@ -38,7 +41,6 @@
 - improve flow when encountering an error viewing a deep link from another website (i.e. going from google.com to students/:id page)
 - show stack trace in error modal using 'Advanced' expansion approach. show HTTP response codes, etc, as well
 - improve the classes = canEdit logic in components/profile-image render()
-- preserve paragraph formatting in student story textarea (is WYSIWYG overkill?)
 - update isPartner/canEdit check for profile images to only allow the partner who owns the student to edit the profile image
 - research image cropping and optimization process (SaaS avail? browser-side JS library?)
 - add validation to express endpoints, use a method that can be reused on the client (is there a way to unify React.PropTypes, Ampersand model definitions, Express param validation, etc?)
