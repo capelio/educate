@@ -50,7 +50,7 @@ export default React.createClass({
   },
 
   render () {
-    const {appUrl, name, profileImageUrl} = this.props.student
+    const {viewUrl, name, profileImageUrl} = this.props.student
     const {amount} = this.state
 
     return (
@@ -66,7 +66,7 @@ export default React.createClass({
                 </div>
 
                 <button type='submit' className='button button-approve'>Donate</button>&nbsp;
-                <a href={appUrl} className='button button-neutral'>Cancel</a>
+                <a href={viewUrl} className='button button-neutral'>Cancel</a>
               </fieldset>
             </form>
           </div>

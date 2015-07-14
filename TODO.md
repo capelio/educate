@@ -51,6 +51,7 @@
 - add login/logout flows
 - rename Partner page to Dashboard, update all links to /partners
 - remove Teachers page and route
+- change appUrl to viewUrl
 
 ### 2015-07-08
 

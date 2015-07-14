@@ -25,7 +25,7 @@ export default Model.extend(tokenMixin, {
   },
 
   derived: {
-    appUrl: {
+    viewUrl: {
       deps: ['id'],
 
       fn () {

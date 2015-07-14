@@ -21,7 +21,7 @@ export default React.createClass({
       <div key={student.id} className='student-summary grid-flex-container'>
         <div className='grid-flex-cell'>
           <h3 className='student-summary_name'>
-            <a href={student.appUrl}>{student.name}</a>
+            <a href={student.viewUrl}>{student.name}</a>
           </h3>
 
           <FundingProgress
