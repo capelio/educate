@@ -42,6 +42,8 @@
 ### 2015-07-13
 
 - add How it Works page
+- rename Partner page to Dashboard, update all links to /partners
+- remove Teachers page and route
 
 ### 2015-07-08
 

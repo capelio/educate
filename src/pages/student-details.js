@@ -16,7 +16,7 @@ export default React.createClass({
   render () {
     const {student} = this.props
     const canEdit = app.me.isPartner
-    const deactivateRedirect = '/partners'
+    const deactivateRedirect = '/dashboard'
 
     let content
 

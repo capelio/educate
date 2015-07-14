@@ -6,12 +6,11 @@ import Layout from 'app/layout'
 import DonationPage from 'pages/donation'
 import HowItWorksPage from 'pages/how-it-works'
 import MessagePage from 'pages/message'
-import PartnersPage from 'pages/partners'
+import DashboardPage from 'pages/dashboard'
 import SignInPage from 'pages/sign-in'
 import StudentDetailsPage from 'pages/student-details'
 import StudentFormPage from 'pages/student-form'
 import StudentsPage from 'pages/students'
-import TeachersPage from 'pages/teachers'
 import Student from 'models/student'
 import modal from 'helpers/modal'
 
@@ -30,14 +29,13 @@ export default Router.extend({
 
   routes: {
     '': 'students',
+    'dashboard': 'dashboard',
     'howitworks': 'howItWorks',
-    'partners': 'partners',
     'signin': 'signIn',
     'students/create': 'createStudent',
     'students/:id': 'viewStudent',
     'students/:id/edit': 'editStudent',
     'students/:id/donate': 'donate',
-    'teachers': 'teachers',
     '*path': 'notFound'
   },
 
@@ -104,12 +102,8 @@ export default Router.extend({
     })
   },
 
-  partners () {
-    this.renderPage(<PartnersPage students={app.students}/>)
-  },
-
-  teachers () {
-    this.renderPage(<TeachersPage/>)
+  dashboard () {
+    this.renderPage(<DashboardPage students={app.students}/>)
   },
 
   notFound () {

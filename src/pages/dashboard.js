@@ -14,7 +14,7 @@ export default React.createClass({
     const {students} = this.props
 
     return (
-      <div className='partners-page'>
+      <div className='dashboard-page'>
         <p>
           <a href='/students/create' className='button'><span className='octicon octicon-plus'></span> Add New Student</a>
         </p>
