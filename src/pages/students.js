@@ -18,9 +18,9 @@ export default React.createClass({
       <div className='students-page'>
         <h3 style={{textAlign: 'center'}}>Keep Nepal's earthquake affected children in school</h3>
 
-        {students.map(student =>
-          <StudentSummary key={student.id} student={student}/>
-        )}
+        {students.map(student => {
+          return <StudentSummary key={student.id} student={student}/>
+        })}
       </div>
     )
   }
