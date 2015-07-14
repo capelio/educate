@@ -26,10 +26,15 @@ export default React.createClass({
       content = (
         <div className='student-details-page'>
           <StudentDetails student={student}/>
-          <StudentAdminBar
-            deactivateRedirect={deactivateRedirect}
-            student={student}
-          />
+
+          <div className='grid-flex-container'>
+            <div className='grid-flex-cell'>
+              <StudentAdminBar
+                deactivateRedirect={deactivateRedirect}
+                student={student}
+              />
+            </div>
+          </div>
 
           <h3>Donations</h3>
           <ManualDonationForm student={student}/>
