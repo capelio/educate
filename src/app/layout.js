@@ -40,7 +40,11 @@ export default React.createClass({
      */
     app.me.unset('token', {silent: true})
 
-    app.router.history.navigate('/')
+    if (window.location.pathname === '/') {
+      app.router.reload()
+    } else {
+      app.router.history.navigate('/')
+    }
   },
 
   render () {
