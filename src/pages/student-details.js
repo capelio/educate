@@ -2,6 +2,7 @@ import app from 'ampersand-app'
 import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
 
+import DonationsList from 'components/donations-list'
 import StudentAdminBar from 'components/student-admin-bar'
 import StudentDetails from 'components/student-details'
 import types from 'helpers/prop-types'
@@ -28,6 +29,9 @@ export default React.createClass({
             deactivateRedirect={deactivateRedirect}
             student={student}
           />
+
+          <h3>Donations</h3>
+          <DonationsList donations={student.donations}/>
         </div>
       )
     } else {
