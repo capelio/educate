@@ -32,6 +32,7 @@ export default React.createClass({
 
     request
       .post(url)
+      .set('Authorization', app.me.token)
       .attach('image', file, file.name)
       .end((err, res) => {
         if (err) {
