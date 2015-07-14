@@ -3,6 +3,9 @@
 ## NEXT
 
 - restart pm2 and dropbox on server restart
+- change isPartner/canEdit checks to look for app.me.token, remove app.me.isPartner
+- change instances of app.router.navigate to app.router.history.navigate
+- fix bug when submitting empty signin form
 - add Organizations page (mission, updates, etc)
 - when focusing Goal field on student form, place cursor at end of $
 - add $ pretty format to donate form, do focus trick as well
@@ -14,6 +17,10 @@
 
 ## LATER
 
+- add trace instrumentation
+- add and use express.js cors module
+- use JWT, Macaroons, or Hawk for authentication
+- add real user dashboard pages
 - add validation for funding goal amount during create/update
 - add validation for donation amount on pages/donation
 - collapse menu after selection
