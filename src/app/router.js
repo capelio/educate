@@ -113,7 +113,13 @@ export default Router.extend({
   },
 
   dashboard () {
-    this.renderPage(<DashboardPage students={app.students}/>)
+    app.students.fetch({
+      success: () => {
+        app.students.each(s => s.donations.fetch())
+
+        this.renderPage(<DashboardPage students={app.students}/>)
+      }
+    })
   },
 
   notFound () {

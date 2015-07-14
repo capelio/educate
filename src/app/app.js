@@ -16,9 +16,7 @@ window.app = app
 app.extend({
   init () {
     this.me = new Me()
-
     this.students = new StudentCollection()
-    this.students.fetch()
 
     this.router = new Router()
     this.router.history.start()
