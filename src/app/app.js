@@ -4,6 +4,7 @@ import config from 'app/config'
 import Router from 'app/router'
 import Me from 'models/me'
 import StudentCollection from 'models/student-collection'
+import trace from 'app/trace'
 
 /*
  * Webpack takes care of injecting styles for us, so we
@@ -23,7 +24,8 @@ app.extend({
     this.router.history.start()
   },
 
-  config: config
+  config: config,
+  trace: trace
 })
 
 app.init()

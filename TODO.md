@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- add trace module and expose via app
 - create separate students-list and students-list-item components and use for dashboard
 - link to students/:id/manage from the dashboard, render pages/student-management.js
 - remove isAuthenticated switches from student-details
@@ -79,6 +78,7 @@
 - delete and re-add production students so timestamp are created
 - add description field to donation models
 - preserve paragraph formatting in student story textarea (is WYSIWYG overkill?)
+- add trace module and expose via app
 
 ### 2015-07-13
 
