@@ -2,10 +2,6 @@
 
 ## NEXT
 
-- save orgId when saving students
-- only list organization students on dashboard
-- create separate students-list components and use for dashboard
-- split students/:id into students/:id and students/:id/manage
 - fix issue with admin bar functions still avail after signout
 - add createdAt, updatedAt, and archivedAt timestamp to all records
 - add Date/createdAt column to DonationsList
@@ -21,7 +17,13 @@
 - update db calls to exclude archived students unless explicitly asked for
 - add/edit/archive student case studies
 - add student/organization relationship to student creation and db process
-- only display organization students on dashboard
+- create admin page
+- create org add/edit/archive components
+- create user add/edit/archive components
+- save orgId when saving students
+- only list organization students on dashboard
+- create separate students-list components and use for dashboard
+- split students/:id into students/:id and students/:id/manage
 - view archived students
 - add expenses page for organizations
 - list students and expenses on organization dashboard
