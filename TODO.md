@@ -2,6 +2,11 @@
 
 ## NEXT
 
+- add trace module and expose via app
+- create separate students-list and students-list-item components and use for dashboard
+- link to students/:id/manage from the dashboard, render pages/student-management.js
+- remove isAuthenticated switches from student-details
+- add donor field to donations
 - hook up real donations
 - change image tap action to view fullscreen image
 - add Change Image button below image for organizations
@@ -16,8 +21,6 @@
 - create user add/edit/archive components
 - save orgId when saving students
 - only list organization students on dashboard
-- create separate students-list components and use for dashboard
-- split students/:id into students/:id and students/:id/manage
 - view archived students
 - add expenses page for organizations
 - list students and expenses on organization dashboard
