@@ -2,7 +2,7 @@
 
 ## NEXT
 
-- add createdAt, updatedAt, and archivedAt timestamp to all records
+- add createdAt and updatedAt timestamps to all records
 - add Date/createdAt column to DonationsList
 - delete and re-add production students so timestamp are created
 - add description field to donation models
