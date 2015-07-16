@@ -6,6 +6,7 @@ export default React.createClass({
     this.spinner = new Spinner({
       className: 'spinjs-spinner'
     })
+
     this.spinner.spin(React.findDOMNode(this.refs.container))
   },
 
