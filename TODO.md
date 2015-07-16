@@ -2,6 +2,7 @@
 
 ## NEXT
 
+- hook up real donations
 - change image tap action to view fullscreen image
 - add Change Image button below image for organizations
 - change layout's signedIn method to use app.me.isAuthenticated
