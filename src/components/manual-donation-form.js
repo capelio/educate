@@ -13,7 +13,8 @@ export default React.createClass({
 
   getInitialState () {
     return {
-      amount: 0
+      amount: 0,
+      description: ''
     }
   },
 
@@ -23,6 +24,14 @@ export default React.createClass({
 
     this.setState({
       amount
+    })
+  },
+
+  onDescriptionChange (event) {
+    const description = event.target.value
+
+    this.setState({
+      description
     })
   },
 
@@ -56,7 +65,7 @@ export default React.createClass({
   },
 
   render () {
-    const {amount} = this.state
+    const {amount, description} = this.state
     const prettyAmount = '$' + (amount ? amount : '')
 
     return (
@@ -73,6 +82,18 @@ export default React.createClass({
                 className='form-input'
                 value={prettyAmount}
                 onChange={this.onAmountChange}
+              />
+            </div>
+
+            <div className='form-element'>
+              <label htmlFor='description'>Description</label>
+              <input
+                id='description'
+                type='text'
+                className='form-input'
+                value={description}
+                placeholder='Short description of the donation'
+                onChange={this.onDescriptionChange}
               />
             </div>
 

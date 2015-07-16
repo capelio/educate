@@ -7,6 +7,7 @@ export default Model.extend(tokenMixin, {
     id: 'string',
     studentId: 'string',
     amount: 'number',
+    description: 'string',
     createdAt: 'string',
     updatedAt: 'string'
   },

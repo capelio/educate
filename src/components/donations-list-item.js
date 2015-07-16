@@ -13,16 +13,17 @@ export default React.createClass({
   },
 
   getInitialState () {
-    const {amount} = this.props.donation
+    const {amount, description} = this.props.donation
 
     return {
-      amount
+      amount,
+      description
     }
   },
 
   componentDidUpdate () {
     if (this.state.editing) {
-      React.findDOMNode(this.refs.amount).focus()
+      React.findDOMNode(this.refs.description).focus()
     }
   },
 
@@ -94,9 +95,17 @@ export default React.createClass({
     })
   },
 
+  onDescriptionChange (event) {
+    const description = event.target.value
+
+    this.setState({
+      description
+    })
+  },
+
   render () {
     const {createdAt, editing} = this.props.donation
-    const {amount} = this.state
+    const {amount, description} = this.state
     const prettyDate = moment(createdAt).format('DD MMM YYYY')
     const prettyAmount = '$' + (amount ? amount : '')
 
@@ -108,7 +117,24 @@ export default React.createClass({
           </td>
           <td>
             <form onSubmit={this.onFormSubmit}>
-              <input className='form-input form-element' onChange={this.onAmountChange} name='amount' ref='amount' value={prettyAmount}/>
+              <input
+                className='form-input form-element'
+                onChange={this.onDescriptionChange}
+                name='description'
+                ref='description'
+                value={description}
+              />
+            </form>
+          </td>
+          <td>
+            <form onSubmit={this.onFormSubmit}>
+              <input
+                className='form-input form-element'
+                onChange={this.onAmountChange}
+                name='amount'
+                ref='amount'
+                value={prettyAmount}
+              />
             </form>
           </td>
           <td>
@@ -123,6 +149,9 @@ export default React.createClass({
         <tr>
           <td>
             {prettyDate}
+          </td>
+          <td>
+            {description}
           </td>
           <td>
             {prettyAmount}

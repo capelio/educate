@@ -2,8 +2,6 @@
 
 ## NEXT
 
-- add description field to donation models
-
 - preserve paragraph formatting in student story textarea (is WYSIWYG overkill?)
 - change image tap action to view fullscreen image
 - add Change Image button below image for organizations
@@ -76,6 +74,7 @@
 - add createdAt and updatedAt timestamps to all records
 - add Date/createdAt column to DonationsList
 - delete and re-add production students so timestamp are created
+- add description field to donation models
 
 ### 2015-07-13
 
