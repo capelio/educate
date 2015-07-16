@@ -1,12 +1,10 @@
 import React from 'react'
 
-const {func, string} = React.PropTypes
-
 export default React.createClass({
   propTypes: {
-    body: string,
-    onClose: func,
-    title: string
+    body: React.PropTypes.string,
+    onClose: React.PropTypes.func,
+    title: React.PropTypes.string
   },
 
   onCloseClick (event) {

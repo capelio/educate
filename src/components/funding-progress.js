@@ -1,15 +1,13 @@
 import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
 
-const {bool, object} = React.PropTypes
-
 export default React.createClass({
   mixins: [ampersandMixin],
 
   propTypes: {
-    canDonate: bool,
-    donations: object,
-    student: object
+    canDonate: React.PropTypes.bool,
+    donations: React.PropTypes.object,
+    student: React.PropTypes.object
   },
 
   render () {

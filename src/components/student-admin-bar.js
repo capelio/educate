@@ -5,13 +5,11 @@ import ampersandMixin from 'ampersand-react-mixin'
 import modal from 'helpers/modal'
 import spinner from 'helpers/spinner'
 
-const {string} = React.PropTypes
-
 export default React.createClass({
   mixins: [ampersandMixin],
 
   propTypes: {
-    deactivateRedirect: string,
+    deactivateRedirect: React.PropTypes.string,
     student: React.PropTypes.object
   },
 
