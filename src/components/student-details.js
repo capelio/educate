@@ -1,6 +1,7 @@
 import app from 'ampersand-app'
 import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
+import FormattedText from 'formatted-text'
 
 import FundingProgress from 'components/funding-progress'
 import ProfileImage from 'components/profile-image'
@@ -29,7 +30,9 @@ export default React.createClass({
             student={student}
           />
 
-          <p>{student.story}</p>
+          <FormattedText>
+            {student.story}
+          </FormattedText>
         </div>
 
         <div className='grid-flex-cell grid-flex-cell-1of4'>
