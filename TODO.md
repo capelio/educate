@@ -7,7 +7,6 @@
 - preserve paragraph formatting in student story textarea (is WYSIWYG overkill?)
 - change image tap action to view fullscreen image
 - add Change Image button below image for organizations
-- allow organizations to manually add/edit/archive donations
 - change deactivate student to archive student
 - update db calls to exclude archived students unless explicitly asked for
 - add/edit/archive student case studies
@@ -54,6 +53,10 @@
 - use "donate for X years of education" messaging
 
 ## DONE
+
+### 2015-07-16
+
+- allow organizations to manually add/edit/archive donations
 
 ### 2015-07-13
 
