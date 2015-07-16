@@ -1,5 +1,6 @@
 import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
+
 import StudentForm from 'components/student-form'
 
 export default React.createClass({

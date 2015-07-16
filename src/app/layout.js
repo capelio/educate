@@ -1,7 +1,8 @@
 import app from 'ampersand-app'
 import React from 'react'
-import NavHelper from 'components/nav-helper'
 import request from 'superagent'
+
+import NavHelper from 'components/nav-helper'
 
 export default React.createClass({
   propTypes: {

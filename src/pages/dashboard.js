@@ -1,5 +1,6 @@
 import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
+
 import StudentSummary from 'components/student-summary'
 
 export default React.createClass({

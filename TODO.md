@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- add newline to separate npm imports from local imports
 - save orgId when saving students
 - only list organization students on dashboard
 - create separate students-list components and use for dashboard
@@ -74,6 +73,7 @@
 
 - allow organizations to manually add/edit/archive donations
 - remove propTypes helper
+- add newline to separate npm imports from local imports
 
 ### 2015-07-13
 

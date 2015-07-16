@@ -1,5 +1,6 @@
 import app from 'ampersand-app'
 import Model from 'ampersand-model'
+
 import DonationCollection from 'models/donation-collection'
 import tokenMixin from 'helpers/token-mixin'
 

@@ -1,4 +1,5 @@
 import app from 'ampersand-app'
+
 import config from 'app/config'
 import Router from 'app/router'
 import Me from 'models/me'
