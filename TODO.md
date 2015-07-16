@@ -2,9 +2,6 @@
 
 ## NEXT
 
-- add createdAt and updatedAt timestamps to all records
-- add Date/createdAt column to DonationsList
-- delete and re-add production students so timestamp are created
 - add description field to donation models
 
 - preserve paragraph formatting in student story textarea (is WYSIWYG overkill?)
@@ -76,6 +73,9 @@
 - remove propTypes helper
 - add newline to separate npm imports from local imports
 - fix issue with admin bar functions still avail after signout
+- add createdAt and updatedAt timestamps to all records
+- add Date/createdAt column to DonationsList
+- delete and re-add production students so timestamp are created
 
 ### 2015-07-13
 

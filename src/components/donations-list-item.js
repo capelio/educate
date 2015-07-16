@@ -1,5 +1,6 @@
 import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
+import moment from 'moment'
 
 import modal from 'helpers/modal'
 import spinner from 'helpers/spinner'
@@ -94,13 +95,17 @@ export default React.createClass({
   },
 
   render () {
-    const {editing} = this.props.donation
+    const {createdAt, editing} = this.props.donation
     const {amount} = this.state
+    const prettyDate = moment(createdAt).format('DD MMM YYYY')
     const prettyAmount = '$' + (amount ? amount : '')
 
     if (editing) {
       return (
         <tr>
+          <td>
+            {prettyDate}
+          </td>
           <td>
             <form onSubmit={this.onFormSubmit}>
               <input className='form-input form-element' onChange={this.onAmountChange} name='amount' ref='amount' value={prettyAmount}/>
@@ -116,6 +121,9 @@ export default React.createClass({
     } else {
       return (
         <tr>
+          <td>
+            {prettyDate}
+          </td>
           <td>
             {prettyAmount}
           </td>

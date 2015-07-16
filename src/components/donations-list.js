@@ -18,6 +18,7 @@ export default React.createClass({
         <table className='table-striped'>
           <thead>
             <tr>
+              <th>Date</th>
               <th>Amount</th>
               <th>Actions</th>
             </tr>

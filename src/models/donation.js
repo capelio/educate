@@ -6,7 +6,9 @@ export default Model.extend(tokenMixin, {
   props: {
     id: 'string',
     studentId: 'string',
-    amount: 'number'
+    amount: 'number',
+    createdAt: 'string',
+    updatedAt: 'string'
   },
 
   session: {

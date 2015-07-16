@@ -14,6 +14,8 @@ export default Model.extend(tokenMixin, {
     name: 'string',
     story: 'string',
     goal: 'number',
+    createdAt: 'string',
+    updatedAt: 'string',
 
     profileImage: {
       type: 'string',
