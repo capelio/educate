@@ -32,14 +32,8 @@ export default React.createClass({
     // Clear the token from localStorage
     window.localStorage.clear()
 
-    /*
-     * Unset app.me.token silently. If silent were not used, the
-     * model would generate a change event for me's token
-     * property, which would cause app.me.token to be set to
-     * "undefined" - the toString()'d result of attempting to
-     * lookup a localStorage property that doesn't exist
-     */
-    app.me.unset('token', {silent: true})
+    // Clear the token from the me model
+    app.me.unset('token')
 
     if (window.location.pathname === '/') {
       app.router.reload()

@@ -28,7 +28,7 @@ export default Model.extend(tokenMixin, {
   },
 
   onTokenChange () {
-    if (window.localStorage) {
+    if (this.token && window.localStorage) {
       window.localStorage.token = this.token
     }
   }

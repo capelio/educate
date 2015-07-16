@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- fix issue with admin bar functions still avail after signout
 - add createdAt, updatedAt, and archivedAt timestamp to all records
 - add Date/createdAt column to DonationsList
 - delete and re-add production students so timestamp are created
@@ -76,6 +75,7 @@
 - allow organizations to manually add/edit/archive donations
 - remove propTypes helper
 - add newline to separate npm imports from local imports
+- fix issue with admin bar functions still avail after signout
 
 ### 2015-07-13
 
