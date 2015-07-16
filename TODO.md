@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- remove propTypes helper
 - add newline to separate npm imports from local imports
 - save orgId when saving students
 - only list organization students on dashboard
@@ -74,6 +73,7 @@
 ### 2015-07-16
 
 - allow organizations to manually add/edit/archive donations
+- remove propTypes helper
 
 ### 2015-07-13
 

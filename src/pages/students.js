@@ -2,13 +2,12 @@ import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
 
 import StudentSummary from 'components/student-summary'
-import types from 'helpers/prop-types'
 
 export default React.createClass({
   mixins: [ampersandMixin],
 
   propTypes: {
-    students: types.students
+    students: React.PropTypes.object
   },
 
   render () {

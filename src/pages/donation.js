@@ -2,11 +2,10 @@ import app from 'ampersand-app'
 import React from 'react'
 import modal from 'helpers/modal'
 import spinner from 'helpers/spinner'
-import types from 'helpers/prop-types'
 
 export default React.createClass({
   propTypes: {
-    student: types.student
+    student: React.PropTypes.object
   },
 
   getInitialState () {

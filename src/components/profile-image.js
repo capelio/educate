@@ -4,13 +4,12 @@ import ampersandMixin from 'ampersand-react-mixin'
 import request from 'superagent'
 import modal from 'helpers/modal'
 import spinner from 'helpers/spinner'
-import types from 'helpers/prop-types'
 
 export default React.createClass({
   mixins: [ampersandMixin],
 
   propTypes: {
-    student: types.student,
+    student: React.PropTypes.object,
     canEdit: React.PropTypes.bool
   },
 

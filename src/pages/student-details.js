@@ -6,13 +6,12 @@ import DonationsList from 'components/donations-list'
 import ManualDonationForm from 'components/manual-donation-form'
 import StudentAdminBar from 'components/student-admin-bar'
 import StudentDetails from 'components/student-details'
-import types from 'helpers/prop-types'
 
 export default React.createClass({
   mixins: [ampersandMixin],
 
   propTypes: {
-    student: types.student
+    student: React.PropTypes.object
   },
 
   render () {

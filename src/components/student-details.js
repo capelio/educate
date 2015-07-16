@@ -4,13 +4,12 @@ import ampersandMixin from 'ampersand-react-mixin'
 
 import FundingProgress from 'components/funding-progress'
 import ProfileImage from 'components/profile-image'
-import types from 'helpers/prop-types'
 
 export default React.createClass({
   mixins: [ampersandMixin],
 
   propTypes: {
-    student: types.student
+    student: React.PropTypes.object
   },
 
   render () {
