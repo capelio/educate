@@ -2,11 +2,18 @@
 
 ## NEXT
 
+- split students/:id into students/:id and students/:id/manage
 - fix issue with admin bar functions still avail after signout
-- change layout's signedIn method to use app.me.isAuthenticated
+- add createdAt, updatedAt, and archivedAt timestamp to all records
+- add Date/createdAt column to DonationsList
+- delete and re-add production students so timestamp are created
+- add description field to donation models
+
 - preserve paragraph formatting in student story textarea (is WYSIWYG overkill?)
 - change image tap action to view fullscreen image
 - add Change Image button below image for organizations
+- change layout's signedIn method to use app.me.isAuthenticated
+- add renderSignInLink and renderAccountMenu to layout
 - change deactivate student to archive student
 - update db calls to exclude archived students unless explicitly asked for
 - add/edit/archive student case studies
@@ -27,6 +34,11 @@
 
 ## LATER
 
+- figure out how to deal with updating collection after a model save
+- come up with a pattern for separating compositional layout components (that need to know about Yeti/Bootstrap, etc) from reusable functional components
+- split express routes into routes/resource.js files
+- turn token generator into a module
+- turn db layer into a fully journaled db (easy audit logging, replay, etc)
 - add trace instrumentation
 - add and use express.js cors module
 - use JWT, Macaroons, or Hawk for authentication
