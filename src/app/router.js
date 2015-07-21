@@ -80,7 +80,7 @@ export default Router.extend({
       if (err) {
         modal.open({
           title: 'Error',
-          body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problems persists, please contat support.'
+          body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problems persists, please contact support.'
         })
       } else {
         this.renderPage(<StudentDetailsPage student={student}/>)
@@ -106,7 +106,7 @@ export default Router.extend({
       if (err) {
         modal.open({
           title: 'Error',
-          body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problems persists, please contat support.'
+          body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problems persists, please contact support.'
         })
       } else {
         this.renderPage(<StudentFormPage student={student}/>)
