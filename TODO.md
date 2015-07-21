@@ -2,7 +2,7 @@
 
 ## NEXT
 
-- use tabs for managing student profile and student donations
+- use menu for managing student profile and student donations
 - remove isAuthenticated/management switches from student-details
 - add donor field to donations
 - hook up real donations
@@ -34,6 +34,7 @@
 
 ## LATER
 
+- put API calls behind a api.js module (api.getStudents(), api.getDonation(id), etc))
 - figure out how to deal with updating collection after a model save
 - come up with a pattern for separating compositional layout components (that need to know about Yeti/Bootstrap, etc) from reusable functional components
 - split express routes into routes/resource.js files
