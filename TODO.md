@@ -2,9 +2,8 @@
 
 ## NEXT
 
-- create separate students-list and students-list-item components and use for dashboard
-- link to students/:id/manage from the dashboard, render pages/student-management.js
-- remove isAuthenticated switches from student-details
+- use tabs for managing student profile and student donations
+- remove isAuthenticated/management switches from student-details
 - add donor field to donations
 - hook up real donations
 - change image tap action to view fullscreen image
@@ -66,6 +65,11 @@
 - use "donate for X years of education" messaging
 
 ## DONE
+
+### 2015-07-21
+
+- create separate students-list and students-list-item components and use for dashboard
+- link to students/:id/manage from the dashboard, render pages/student-management.js
 
 ### 2015-07-16
 

@@ -10,6 +10,7 @@ import DashboardPage from 'pages/dashboard'
 import SignInPage from 'pages/sign-in'
 import StudentDetailsPage from 'pages/student-details'
 import StudentFormPage from 'pages/student-form'
+import StudentManagementPage from 'pages/student-management'
 import StudentsPage from 'pages/students'
 import Student from 'models/student'
 import modal from 'helpers/modal'
@@ -44,8 +45,9 @@ export default Router.extend({
     'signin': 'signIn',
     'students/create': auth('createStudent'),
     'students/:id': 'viewStudent',
-    'students/:id/edit': auth('editStudent'),
     'students/:id/donate': 'donate',
+    'students/:id/edit': auth('editStudent'),
+    'students/:id/manage': auth('manageStudent'),
     '*path': 'notFound'
   },
 
@@ -86,6 +88,19 @@ export default Router.extend({
     })
   },
 
+  donate (id) {
+    app.students.fetchById(id, (err, student) => {
+      if (err) {
+        modal.open({
+          title: 'Error',
+          body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problems persists, please contact support.'
+        })
+      } else {
+        this.renderPage(<DonationPage student={student}/>)
+      }
+    })
+  },
+
   editStudent (id) {
     app.students.fetchById(id, (err, student) => {
       if (err) {
@@ -99,15 +114,15 @@ export default Router.extend({
     })
   },
 
-  donate (id) {
+  manageStudent (id) {
     app.students.fetchById(id, (err, student) => {
       if (err) {
         modal.open({
           title: 'Error',
-          body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problems persists, please contat support.'
+          body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problems persists, please contact support.'
         })
       } else {
-        this.renderPage(<DonationPage student={student}/>)
+        this.renderPage(<StudentManagementPage student={student}/>)
       }
     })
   },

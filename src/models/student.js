@@ -52,6 +52,14 @@ export default Model.extend(tokenMixin, {
       }
     },
 
+    manageUrl: {
+      deps: ['id'],
+
+      fn () {
+        return '/students/' + this.id + '/manage'
+      }
+    },
+
     profileImageUrl: {
       deps: ['profileImage'],
 
