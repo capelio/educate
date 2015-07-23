@@ -2,9 +2,18 @@
 
 ## NEXT
 
+- move donation Edit and Remove buttons to donation-details component
+- remove Edit & Remove buttons from donations-list, link amount to a donation-details page, put Edit and Remove buttons there
+- link donation Edit button to a donation-form
+- use an Add Donation button instead of an inline form, point button to form
+- on "In Need" page, use a student-summary-card component that composes student info and funding/donation functionality for each student
+- on "Manage Profile" page, use student-profile component that displays student profile info only
+- add profile image to student-profile component
 - remove isAuthenticated/management switches from student-details
 - add donor field to donations
 - hook up real donations
+- display donors on student-details page
+
 - change image tap action to view fullscreen image
 - add Change Image button below image for organizations
 - change layout's signedIn method to use app.me.isAuthenticated
