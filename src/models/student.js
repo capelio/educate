@@ -60,6 +60,22 @@ export default Model.extend(tokenMixin, {
       }
     },
 
+    manageProfileUrl: {
+      deps: ['id'],
+
+      fn () {
+        return '/students/' + this.id + '/manage/profile'
+      }
+    },
+
+    manageDonationsUrl: {
+      deps: ['id'],
+
+      fn () {
+        return '/students/' + this.id + '/manage/donations'
+      }
+    },
+
     profileImageUrl: {
       deps: ['profileImage'],
 

@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- use menu for managing student profile and student donations
 - remove isAuthenticated/management switches from student-details
 - add donor field to donations
 - hook up real donations
@@ -66,6 +65,10 @@
 - use "donate for X years of education" messaging
 
 ## DONE
+
+### 2015-07-23
+
+- use menu for managing student profile and student donations
 
 ### 2015-07-21
 

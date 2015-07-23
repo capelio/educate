@@ -10,7 +10,8 @@ import DashboardPage from 'pages/dashboard'
 import SignInPage from 'pages/sign-in'
 import StudentDetailsPage from 'pages/student-details'
 import StudentFormPage from 'pages/student-form'
-import StudentManagementPage from 'pages/student-management'
+import StudentProfileManagementPage from 'pages/student-profile-management'
+import StudentDonationsManagementPage from 'pages/student-donations-management'
 import StudentsPage from 'pages/students'
 import Student from 'models/student'
 import modal from 'helpers/modal'
@@ -47,7 +48,9 @@ export default Router.extend({
     'students/:id': 'viewStudent',
     'students/:id/donate': 'donate',
     'students/:id/edit': auth('editStudent'),
-    'students/:id/manage': auth('manageStudent'),
+    'students/:id/manage': auth('manageStudentProfile'),
+    'students/:id/manage/profile': auth('manageStudentProfile'),
+    'students/:id/manage/donations': auth('manageStudentDonations'),
     '*path': 'notFound'
   },
 
@@ -114,7 +117,7 @@ export default Router.extend({
     })
   },
 
-  manageStudent (id) {
+  manageStudentProfile (id) {
     app.students.fetchById(id, (err, student) => {
       if (err) {
         modal.open({
@@ -122,7 +125,20 @@ export default Router.extend({
           body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problems persists, please contact support.'
         })
       } else {
-        this.renderPage(<StudentManagementPage student={student}/>)
+        this.renderPage(<StudentProfileManagementPage student={student}/>)
+      }
+    })
+  },
+
+  manageStudentDonations (id) {
+    app.students.fetchById(id, (err, student) => {
+      if (err) {
+        modal.open({
+          title: 'Error',
+          body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problems persists, please contact support.'
+        })
+      } else {
+        this.renderPage(<StudentDonationsManagementPage student={student}/>)
       }
     })
   },
