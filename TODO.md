@@ -2,7 +2,7 @@
 
 ## NEXT
 
-- on "In Need" page, use a student-summary-card component that composes student info and funding/donation functionality for each student
+- on "In Need" page, use a student-card component that composes student info and funding/donation functionality for each student
 - on "Manage Profile" page, use student-profile component that displays student profile info only
 - add profile image to student-profile component
 - add donor field to donations
