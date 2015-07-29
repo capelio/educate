@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- remove isAuthenticated/management switches from student-details
 - remove manual-donation-form component
 
 - on "In Need" page, use a student-summary-card component that composes student info and funding/donation functionality for each student
@@ -79,6 +78,7 @@
 ### 2015-07-29
 
 - use an Add Donation button instead of an inline form, point button to form
+- remove isAuthenticated/management switches from student-details
 
 ### 2015-07-23
 
