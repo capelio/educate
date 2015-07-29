@@ -16,7 +16,7 @@ export default React.createClass({
     return (
       <div className='dashboard-page'>
         <p>
-          <a href='/students/create' className='button'><span className='octicon octicon-plus'></span> Add New Student</a>
+          <a href='/students/create' className='button'> Add New Student</a>
         </p>
 
         <StudentsList students={students}/>
