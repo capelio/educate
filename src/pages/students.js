@@ -1,7 +1,7 @@
 import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
 
-import StudentSummary from 'components/student-summary'
+import StudentCard from 'components/student-card'
 
 export default React.createClass({
   mixins: [ampersandMixin],
@@ -18,7 +18,7 @@ export default React.createClass({
         <h3 style={{textAlign: 'center'}}>Keep Nepal's earthquake affected children in school</h3>
 
         {students.map(student => {
-          return <StudentSummary key={student.id} student={student}/>
+          return <StudentCard key={student.id} student={student}/>
         })}
       </div>
     )
