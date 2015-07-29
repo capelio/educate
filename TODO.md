@@ -79,6 +79,7 @@
 - remove manual-donation-form component
 - on "In Need" page, use a student-card component that composes student info and funding/donation functionality for each student
 - remove the student-summary component
+- unlink student name in student-details component
 
 ### 2015-07-23
 

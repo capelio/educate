@@ -20,9 +20,7 @@ export default React.createClass({
     return (
       <div className='student-details grid-flex-container'>
         <div className='grid-flex-cell'>
-          <h3 className='student-details_name'>
-            <a href={student.viewUrl}>{student.name}</a>
-          </h3>
+          <h3 className='student-details_name'>{student.name}</h3>
 
           <FundingProgress
             canDonate={true}
