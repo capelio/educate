@@ -2,8 +2,7 @@
 
 ## NEXT
 
-- on "Manage Profile" page, use student-profile component that displays student profile info only
-- add profile image to student-profile component
+- add "Manage Images" page to student management, display profile image component
 - add donor field to donations
 - hook up real donations
 - display donors on student-details page
@@ -39,6 +38,7 @@
 
 ## LATER
 
+- add multiple images for students
 - put API calls behind a api.js module (api.getStudents(), api.getDonation(id), etc))
 - figure out how to deal with updating collection after a model save
 - come up with a pattern for separating compositional layout components (that need to know about Yeti/Bootstrap, etc) from reusable functional components
@@ -80,6 +80,7 @@
 - on "In Need" page, use a student-card component that composes student info and funding/donation functionality for each student
 - remove the student-summary component
 - unlink student name in student-details component
+- on "Manage Profile" page, use student-profile component that displays student profile info only
 
 ### 2015-07-23
 
