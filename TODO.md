@@ -2,6 +2,7 @@
 
 ## NEXT
 
+- remove the student-summary component
 - on "Manage Profile" page, use student-profile component that displays student profile info only
 - add profile image to student-profile component
 - add donor field to donations
