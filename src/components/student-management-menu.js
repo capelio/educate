@@ -19,6 +19,9 @@ export default React.createClass({
             <a href={student.manageProfileUrl} className={active === 'profile' ? 'active' : ''}>Profile</a>
           </li>
           <li>
+            <a href={student.manageImagesUrl} className={active === 'images' ? 'active' : ''}>Images</a>
+          </li>
+          <li>
             <a href={student.manageDonationsUrl} className={active === 'donations' ? 'active' : ''}>Donations</a>
           </li>
         </ul>

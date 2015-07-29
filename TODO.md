@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- add "Manage Images" page to student management, display profile image component
 - add donor field to donations
 - hook up real donations
 - display donors on student-details page
@@ -81,6 +80,7 @@
 - remove the student-summary component
 - unlink student name in student-details component
 - on "Manage Profile" page, use student-profile component that displays student profile info only
+- add "Manage Images" page to student management, display profile image component
 
 ### 2015-07-23
 
