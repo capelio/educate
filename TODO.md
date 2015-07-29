@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- remove the student-summary component
 - on "Manage Profile" page, use student-profile component that displays student profile info only
 - add profile image to student-profile component
 - add donor field to donations
@@ -79,6 +78,7 @@
 - remove isAuthenticated/management switches from student-details
 - remove manual-donation-form component
 - on "In Need" page, use a student-card component that composes student info and funding/donation functionality for each student
+- remove the student-summary component
 
 ### 2015-07-23
 
