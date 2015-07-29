@@ -2,13 +2,18 @@
 
 ## NEXT
 
+- remove isAuthenticated/management switches from student-details
+- remove manual-donation-form component
+
 - on "In Need" page, use a student-summary-card component that composes student info and funding/donation functionality for each student
 - on "Manage Profile" page, use student-profile component that displays student profile info only
 - add profile image to student-profile component
-- remove isAuthenticated/management switches from student-details
 - add donor field to donations
 - hook up real donations
 - display donors on student-details page
+
+- change viewUrl, editUrl, etc to viewRoute, editRoute, etc to distinguish from API URLs
+- change students/:id/manage/profile|donations routes to student/:id/profile|donations routes (in model/donation.js donationsRoute prop too)
 
 - change image tap action to view fullscreen image
 - add Change Image button below image for organizations
