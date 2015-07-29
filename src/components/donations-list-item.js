@@ -2,9 +2,6 @@ import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
 import moment from 'moment'
 
-import modal from 'helpers/modal'
-import spinner from 'helpers/spinner'
-
 export default React.createClass({
   mixins: [ampersandMixin],
 
@@ -12,157 +9,23 @@ export default React.createClass({
     donation: React.PropTypes.object
   },
 
-  getInitialState () {
-    const {amount, description} = this.props.donation
-
-    return {
-      amount,
-      description
-    }
-  },
-
-  componentDidUpdate () {
-    if (this.state.editing) {
-      React.findDOMNode(this.refs.description).focus()
-    }
-  },
-
-  onEditClick (event) {
-    this.props.donation.editing = true
-  },
-
-  onRemoveClick (event) {
-    if (window.confirm('Are you sure you want to remove this donation?')) {
-      spinner.start()
-
-      this.props.donation.destroy({
-        wait: true,
-
-        success () {
-          spinner.stop()
-        },
-
-        error () {
-          spinner.stop()
-
-          modal.open({
-            title: 'Error',
-            body: 'We encountered an error while removing the donation. Please wait a few minutes and try again. If the problem persists, please contact support.'
-          })
-        }
-      })
-    }
-  },
-
-  onFormSubmit (event) {
-    event.preventDefault()
-
-    const {donation} = this.props
-
-    spinner.start()
-
-    donation.save(this.state, {
-      wait: true,
-
-      success: () => {
-        spinner.stop()
-
-        donation.editing = false
-      },
-
-      error () {
-        spinner.stop()
-
-        modal.open({
-          title: 'Error',
-          body: 'We encountered an error while saving the donation. Please wait a few minutes and try again. If the problem persists, please contact support.'
-        })
-      }
-    })
-  },
-
-  onCancelClick (event) {
-    this.props.donation.editing = false
-    this.setState(this.getInitialState())
-  },
-
-  onAmountChange (event) {
-    let amount = event.target.value.slice(1)
-    amount = parseInt(amount, 10)
-
-    this.setState({
-      amount
-    })
-  },
-
-  onDescriptionChange (event) {
-    const description = event.target.value
-
-    this.setState({
-      description
-    })
-  },
-
   render () {
-    const {createdAt, editing} = this.props.donation
-    const {amount, description} = this.state
+    const {amount, createdAt, description, viewRoute} = this.props.donation
     const prettyDate = moment(createdAt).format('DD MMM YYYY')
     const prettyAmount = '$' + (amount ? amount : '')
 
-    if (editing) {
-      return (
-        <tr>
-          <td>
-            {prettyDate}
-          </td>
-          <td>
-            <form onSubmit={this.onFormSubmit}>
-              <input
-                className='form-input form-element'
-                onChange={this.onDescriptionChange}
-                name='description'
-                ref='description'
-                value={description}
-              />
-            </form>
-          </td>
-          <td>
-            <form onSubmit={this.onFormSubmit}>
-              <input
-                className='form-input form-element'
-                onChange={this.onAmountChange}
-                name='amount'
-                ref='amount'
-                value={prettyAmount}
-              />
-            </form>
-          </td>
-          <td>
-            <button className='button' onClick={this.onFormSubmit}>Save</button>
-            &nbsp;
-            <button className='button button-warn' onClick={this.onCancelClick}>Cancel</button>
-          </td>
-        </tr>
-      )
-    } else {
-      return (
-        <tr>
-          <td>
-            {prettyDate}
-          </td>
-          <td>
-            {description}
-          </td>
-          <td>
-            {prettyAmount}
-          </td>
-          <td>
-            <button className='button' onClick={this.onEditClick}>Edit</button>
-            &nbsp;
-            <button className='button button-warn' onClick={this.onRemoveClick}>Remove</button>
-          </td>
-        </tr>
-      )
-    }
+    return (
+      <tr>
+        <td>
+          {prettyDate}
+        </td>
+        <td>
+          {description}
+        </td>
+        <td>
+          <a href={viewRoute}>{prettyAmount}</a>
+        </td>
+      </tr>
+    )
   }
 })

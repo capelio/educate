@@ -36,6 +36,14 @@ export default Model.extend(tokenMixin, {
       }
     },
 
+    createDonationRoute: {
+      deps: ['id'],
+
+      fn () {
+        return '/students/' + this.id + '/donations/create'
+      }
+    },
+
     donateUrl: {
       deps: ['id'],
 

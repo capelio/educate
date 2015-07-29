@@ -21,12 +21,16 @@ export default React.createClass({
               <th>Date</th>
               <th>Description</th>
               <th>Amount</th>
-              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
             {donations.map(d => {
-              return <DonationsListItem key={d.id} donation={d}/>
+              return (
+                <DonationsListItem
+                  key={d.id}
+                  donation={d}
+                />
+              )
             })}
           </tbody>
         </table>

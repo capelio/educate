@@ -2,10 +2,6 @@
 
 ## NEXT
 
-- move donation Edit and Remove buttons to donation-details component
-- remove Edit & Remove buttons from donations-list, link amount to a donation-details page, put Edit and Remove buttons there
-- link donation Edit button to a donation-form
-- use an Add Donation button instead of an inline form, point button to form
 - on "In Need" page, use a student-summary-card component that composes student info and funding/donation functionality for each student
 - on "Manage Profile" page, use student-profile component that displays student profile info only
 - add profile image to student-profile component
@@ -75,9 +71,16 @@
 
 ## DONE
 
+### 2015-07-29
+
+- use an Add Donation button instead of an inline form, point button to form
+
 ### 2015-07-23
 
 - use menu for managing student profile and student donations
+- move donation Edit and Remove buttons to donation-details component
+- remove Edit & Remove buttons from donations-list, link amount to a donation-details page, put Edit and Remove buttons there
+- link donation Edit button to a donation-form
 
 ### 2015-07-21
 
