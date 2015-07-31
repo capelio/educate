@@ -26,15 +26,8 @@ export default React.createClass({
 
   onSuccess () {
     const {donation} = this.props
-    let route
 
-    if (donation.isNew()) {
-      route = donation.donationsRoute
-    } else {
-      route = donation.viewRoute
-    }
-
-    app.router.history.navigate(route)
+    app.router.history.navigate(donation.donationsRoute)
   },
 
   render () {

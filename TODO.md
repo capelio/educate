@@ -75,6 +75,7 @@
 - enable donation removal
 - update Students in Need layout to better fit existing pictures
 - display donors on student-details page, clean up layout
+- redirect to the donations mgmt page after creating/editing a donation
 
 ### 2015-07-29
 
