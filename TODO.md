@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- display donors on student-details page, clean up layout
 - hook up real donations
 
 - change viewUrl, editUrl, etc to viewRoute, editRoute, etc to distinguish from API URLs
@@ -75,6 +74,7 @@
 - add donor field to donations
 - enable donation removal
 - update Students in Need layout to better fit existing pictures
+- display donors on student-details page, clean up layout
 
 ### 2015-07-29
 

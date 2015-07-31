@@ -28,12 +28,14 @@ export default React.createClass({
               <img src={student.profileImageUrl} width='300px'/>
             </figure>
           </a>
+
           <div style={{textAlign: 'center'}}>
             <FundingSummary student={student} donations={student.donations}/>
           </div>
         </div>
         <div className='grid-flex-cell'>
           <a href={viewUrl}><h3 className='name'>{student.name}</h3></a>
+
           <p className='story'>{story} <span><a href={viewUrl}>Read more</a></span></p>
         </div>
       </div>

@@ -1,10 +1,9 @@
-import app from 'ampersand-app'
 import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
 import FormattedText from 'formatted-text'
 
-import FundingProgress from 'components/funding-progress'
-import ProfileImage from 'components/profile-image'
+import DonorsList from 'components/donors-list'
+import FundingSummary from 'components/funding-summary'
 
 export default React.createClass({
   mixins: [ampersandMixin],
@@ -13,28 +12,47 @@ export default React.createClass({
     student: React.PropTypes.object
   },
 
+  renderDonorsList () {
+    const {donations} = this.props.student
+
+    if (donations.length > 0) {
+      return <DonorsList donations={donations}/>
+    } else {
+      return <div>Be the first to donate by using the Donate Now button above!</div>
+    }
+  },
+
   render () {
     const {student} = this.props
-    const {isAuthenticated} = app.me
+    const {donateUrl} = student
 
     return (
       <div className='student-details grid-flex-container'>
-        <div className='grid-flex-cell'>
-          <h3 className='student-details_name'>{student.name}</h3>
+        <div className='grid-flex-cell-1of3'>
+          <figure className='media-outlined'>
+            <img src={student.profileImageUrl} width='300px'/>
+          </figure>
 
-          <FundingProgress
-            canDonate={true}
-            donations={student.donations}
-            student={student}
-          />
+          <div className='funding-summary' style={{textAlign: 'center'}}>
+            <FundingSummary student={student} donations={student.donations}/>
+          </div>
+
+          <div className='donate-button' style={{textAlign: 'center'}}>
+            <a href={donateUrl} className='button'>Donate Now</a>
+          </div>
+
+          <div className='donors-list'>
+            <h4>Donors</h4>
+            {this.renderDonorsList()}
+          </div>
+        </div>
+
+        <div className='grid-flex-cell'>
+          <h3 className='name'>{student.name}</h3>
 
           <FormattedText>
             {student.story}
           </FormattedText>
-        </div>
-
-        <div className='grid-flex-cell grid-flex-cell-1of4'>
-          <ProfileImage student={student} canEdit={isAuthenticated}/>
         </div>
       </div>
     )
