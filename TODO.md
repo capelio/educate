@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- remove the funding-progress component
 - hook up real donations
 
 - change viewUrl, editUrl, etc to viewRoute, editRoute, etc to distinguish from API URLs
@@ -77,6 +76,7 @@
 - update Students in Need layout to better fit existing pictures
 - display donors on student-details page, clean up layout
 - redirect to the donations mgmt page after creating/editing a donation
+- remove the funding-progress component
 
 ### 2015-07-29
 
