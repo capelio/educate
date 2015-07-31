@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- update Students in Need layout to better fit existing pictures
 - display donors on student-details page, clean up layout
 - hook up real donations
 
@@ -75,6 +74,7 @@
 
 - add donor field to donations
 - enable donation removal
+- update Students in Need layout to better fit existing pictures
 
 ### 2015-07-29
 
