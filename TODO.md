@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- enable donation removal
 - hook up real donations
 - display donors on student-details page
 
@@ -74,6 +73,7 @@
 ### 2015-07-31
 
 - add donor field to donations
+- enable donation removal
 
 ### 2015-07-29
 
