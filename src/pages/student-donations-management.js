@@ -20,7 +20,9 @@ export default React.createClass({
 
         <h3>{student.name} Donations</h3>
 
-        <a href={student.createDonationRoute} className='button'>Add New Donation</a>
+        <p>
+          <a href={student.createDonationRoute} className='button'>Add New Donation</a>
+        </p>
 
         <DonationsList donations={student.donations}/>
       </div>
