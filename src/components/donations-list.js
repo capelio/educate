@@ -19,6 +19,7 @@ export default React.createClass({
           <thead>
             <tr>
               <th>Date</th>
+              <th>Donor</th>
               <th>Description</th>
               <th>Amount</th>
             </tr>

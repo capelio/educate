@@ -23,6 +23,7 @@ export default React.createClass({
 
         <p>{prettyDate}</p>
         <p>{prettyAmount}</p>
+        <p>{donation.donor}</p>
         <p>{donation.description}</p>
         <div>
           <a href={donation.editRoute} className='button'>Edit</a>

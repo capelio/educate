@@ -14,11 +14,12 @@ export default React.createClass({
   },
 
   getInitialState () {
-    const {amount, description} = this.props.donation
+    const {amount, description, donor} = this.props.donation
 
     return {
       amount,
-      description
+      description,
+      donor
     }
   },
 
@@ -28,6 +29,12 @@ export default React.createClass({
 
     this.setState({
       amount
+    })
+  },
+
+  onDonorChange (event) {
+    this.setState({
+      donor: event.target.value
     })
   },
 
@@ -69,7 +76,7 @@ export default React.createClass({
   },
 
   render () {
-    const {amount, description} = this.state
+    const {amount, description, donor} = this.state
     const prettyAmount = '$' + (amount ? amount : '')
 
     return (
@@ -88,6 +95,20 @@ export default React.createClass({
                 id='amount'
                 name='amount'
                 placeholder='Amount'
+                required
+              />
+            </div>
+
+            <div className='form-element'>
+              <label htmlFor='donor'>Donor</label>
+              <input
+                className='form-input'
+                value={donor}
+                onChange={this.onDonorChange}
+                type='text'
+                id='donor'
+                name='donor'
+                placeholder='Donor'
                 required
               />
             </div>

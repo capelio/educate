@@ -13,6 +13,7 @@ export default Model.extend(tokenMixin, {
     studentId: 'string',
     amount: 'number',
     description: 'string',
+    donor: 'string',
     createdAt: 'string',
     updatedAt: 'string'
   },

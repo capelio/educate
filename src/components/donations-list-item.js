@@ -10,7 +10,7 @@ export default React.createClass({
   },
 
   render () {
-    const {amount, createdAt, description, viewRoute} = this.props.donation
+    const {amount, createdAt, description, donor, viewRoute} = this.props.donation
     const prettyDate = moment(createdAt).format('DD MMM YYYY')
     const prettyAmount = '$' + (amount ? amount : '')
 
@@ -18,6 +18,9 @@ export default React.createClass({
       <tr>
         <td>
           {prettyDate}
+        </td>
+        <td>
+          {donor}
         </td>
         <td>
           {description}

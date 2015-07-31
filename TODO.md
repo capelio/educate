@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- add donor field to donations
 - hook up real donations
 - display donors on student-details page
 
@@ -70,6 +69,10 @@
 - use "donate for X years of education" messaging
 
 ## DONE
+
+### 2015-07-31
+
+- add donor field to donations
 
 ### 2015-07-29
 
