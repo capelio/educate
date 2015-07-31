@@ -2,8 +2,9 @@
 
 ## NEXT
 
+- update Students in Need layout to better fit existing pictures
+- display donors on student-details page, clean up layout
 - hook up real donations
-- display donors on student-details page
 
 - change viewUrl, editUrl, etc to viewRoute, editRoute, etc to distinguish from API URLs
 - change students/:id/manage/profile|donations routes to student/:id/profile|donations routes (in model/donation.js donationsRoute prop too)
