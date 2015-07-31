@@ -54,8 +54,9 @@ export default React.createClass({
     const {amount} = this.state
 
     return (
-      <div className='donationPage'>
+      <div className='donation-page'>
         <h3>Donate to {name}</h3>
+
         <div className='grid-flex-container'>
           <div className='grid-flex-cell'>
             <form onSubmit={this.onSubmitForm}>
