@@ -2,6 +2,7 @@
 
 ## NEXT
 
+- remove the funding-progress component
 - hook up real donations
 
 - change viewUrl, editUrl, etc to viewRoute, editRoute, etc to distinguish from API URLs
