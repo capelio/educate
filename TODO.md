@@ -2,6 +2,7 @@
 
 ## NEXT
 
+- enable donation removal
 - hook up real donations
 - display donors on student-details page
 
