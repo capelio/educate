@@ -172,8 +172,7 @@ export default Router.extend({
           body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problems persists, please contact support.'
         })
       } else {
-        const donation = new Donation({collection: student.donations})
-        student.donations.add(donation)
+        const donation = new Donation({studentId: student.id})
 
         this.renderPage(<DonationFormPage student={student} donation={donation}/>)
       }

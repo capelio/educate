@@ -5,7 +5,7 @@ import tokenMixin from 'helpers/token-mixin'
 
 export default Model.extend(tokenMixin, {
   urlRoot () {
-    return app.config.apiRoot + '/students/' + this.collection.parent.id + '/donations'
+    return app.config.apiRoot + '/students/' + this.studentId + '/donations'
   },
 
   props: {
@@ -22,9 +22,7 @@ export default Model.extend(tokenMixin, {
       deps: ['studentId'],
 
       fn () {
-        const studentId = this.collection.parent.id
-
-        return '/students/' + studentId + '/manage/donations'
+        return '/students/' + this.studentId + '/manage/donations'
       }
     },
 
@@ -40,9 +38,7 @@ export default Model.extend(tokenMixin, {
       deps: ['id'],
 
       fn () {
-        const studentId = this.collection.parent.id
-
-        return '/students/' + studentId + '/donations/' + this.id
+        return '/students/' + this.studentId + '/donations/' + this.id
       }
     }
   }
