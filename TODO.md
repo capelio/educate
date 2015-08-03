@@ -2,7 +2,9 @@
 
 ## NEXT
 
+- remove Archive button from dashboard student listing
 - hook up real donations
+- add SSL, force everything over HTTPS
 
 - change viewUrl, editUrl, etc to viewRoute, editRoute, etc to distinguish from API URLs
 - change students/:id/manage/profile|donations routes to student/:id/profile|donations routes (in model/donation.js donationsRoute prop too)
