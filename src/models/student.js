@@ -44,6 +44,14 @@ export default Model.extend(tokenMixin, {
       }
     },
 
+    thankYouRoute: {
+      deps: ['id'],
+
+      fn () {
+        return '/students/' + this.id + '/thankyou'
+      }
+    },
+
     donateUrl: {
       deps: ['id'],
 
@@ -97,6 +105,14 @@ export default Model.extend(tokenMixin, {
 
       fn () {
         return app.config.imagesRoot + '/' + this.profileImage
+      }
+    },
+
+    donateByCardUrl: {
+      deps: ['id'],
+
+      fn () {
+        return this.url() + '/donate/card'
       }
     }
   },

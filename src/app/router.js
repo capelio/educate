@@ -57,6 +57,7 @@ export default Router.extend({
     'students/:id/manage/images': auth('manageStudentImages'),
     'students/:id/manage/profile': auth('manageStudentProfile'),
     'students/:id/donations/create': auth('createDonation'),
+    'students/:id/thankyou': 'donationConfirmation',
     'students/:studentId/donations/:id': auth('viewDonation'),
     'students/:studentId/donations/:id/edit': auth('editDonation'),
     '*path': 'notFound'
@@ -231,6 +232,10 @@ export default Router.extend({
         this.renderPage(<DashboardPage students={app.students}/>)
       }
     })
+  },
+
+  donationConfirmation () {
+    this.renderPage(<MessagePage title='Thank you!' body='Your donation has successfully been processed and a receipt has been sent to your email address.'/>)
   },
 
   notFound () {

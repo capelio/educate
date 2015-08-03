@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- hook up real donations
 - add SSL, force everything over HTTPS
 
 - change viewUrl, editUrl, etc to viewRoute, editRoute, etc to distinguish from API URLs
@@ -69,6 +68,10 @@
 - use "donate for X years of education" messaging
 
 ## DONE
+
+### 2015-08-03
+
+- hook up real donations
 
 ### 2015-08-02
 

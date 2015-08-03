@@ -10,10 +10,12 @@ export default Model.extend(tokenMixin, {
 
   props: {
     id: 'string',
+    chargeId: 'string',
     studentId: 'string',
     amount: 'number',
     description: 'string',
     donor: 'string',
+    email: 'string',
     createdAt: 'string',
     updatedAt: 'string'
   },
