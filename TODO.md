@@ -3,6 +3,10 @@
 ## NEXT
 
 - add SSL, force everything over HTTPS
+- test real money donations in production
+
+- add email to manual donations
+- don't allow manual editing of credit card donations
 
 - change viewUrl, editUrl, etc to viewRoute, editRoute, etc to distinguish from API URLs
 - change students/:id/manage/profile|donations routes to student/:id/profile|donations routes (in model/donation.js donationsRoute prop too)
