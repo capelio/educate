@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- remove Archive button from dashboard student listing
 - hook up real donations
 - add SSL, force everything over HTTPS
 
@@ -70,6 +69,10 @@
 - use "donate for X years of education" messaging
 
 ## DONE
+
+### 2015-08-02
+
+- remove Archive button from dashboard student listing
 
 ### 2015-07-31
 

@@ -37,9 +37,6 @@ export default React.createClass({
         <td>
           {fundingStatus}
         </td>
-        <td>
-          <button className='button button-warn' onClick={this.onArchiveClick}>Archive</button>
-        </td>
       </tr>
     )
   }

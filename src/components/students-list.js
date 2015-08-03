@@ -21,7 +21,6 @@ export default React.createClass({
               <th>Date</th>
               <th>Name</th>
               <th>Funding</th>
-              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
