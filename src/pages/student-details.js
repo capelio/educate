@@ -15,7 +15,7 @@ export default React.createClass({
 
     return (
       <div className='student-details-page'>
-        <StudentDetails student={student}/>
+        <StudentDetails student={student} donations={student.donations}/>
       </div>
     )
   }

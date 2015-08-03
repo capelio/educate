@@ -15,7 +15,7 @@ export default React.createClass({
       <div>
         {donations.map(d => {
           return (
-            <div>
+            <div key={d.id}>
               {d.donor}
             </div>
           )

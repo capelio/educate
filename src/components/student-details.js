@@ -9,13 +9,14 @@ export default React.createClass({
   mixins: [ampersandMixin],
 
   propTypes: {
+    donations: React.PropTypes.object,
     student: React.PropTypes.object
   },
 
   renderDonorsList () {
-    const {donations} = this.props.student
+    const {donations} = this.props
 
-    if (donations.length > 0) {
+    if (donations.length) {
       return <DonorsList donations={donations}/>
     } else {
       return <div>Be the first to donate by using the Donate Now button above!</div>
@@ -23,7 +24,7 @@ export default React.createClass({
   },
 
   render () {
-    const {student} = this.props
+    const {donations, student} = this.props
     const {donateUrl} = student
 
     return (
@@ -34,7 +35,7 @@ export default React.createClass({
           </figure>
 
           <div className='funding-summary' style={{textAlign: 'center'}}>
-            <FundingSummary student={student} donations={student.donations}/>
+            <FundingSummary student={student} donations={donations}/>
           </div>
 
           <div className='donate-button' style={{textAlign: 'center'}}>
