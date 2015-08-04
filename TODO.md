@@ -4,9 +4,17 @@
 
 - add SSL, force everything over HTTPS
 - test real money donations in production
+- fix spinner "The node to be removed is not a child of this node" bug
 
+- add active/inactive mgmt section buttons
+- display donor name on the donation view component
+- after adding a new student, redirect to the student's profile mgmt page
+- when editing a student's profile from the dashboard, return to profile mgmt route on save/cancel
 - add email to manual donations
 - don't allow manual editing of credit card donations
+- only display unfunded students on front page
+- add page for viewing all students, funded and unfunded, with paging/infinite scroll
+- add paging/infinite scroll to dashboard
 
 - change viewUrl, editUrl, etc to viewRoute, editRoute, etc to distinguish from API URLs
 - change students/:id/manage/profile|donations routes to student/:id/profile|donations routes (in model/donation.js donationsRoute prop too)
