@@ -5,7 +5,7 @@ const config = {
     stripeKey: 'pk_test_LXjcXNa8WrI6BGfO97NLE5MI'
   },
 
-  'educate.surge.sh': {
+  'liftupnepal.com': {
     apiRoot: '//188.166.94.30:8080',
     imagesRoot: '//188.166.94.30:8080/images',
     stripeKey: 'pk_live_ckG50jcW2G7WkvmYZy0Dfyfn'
