@@ -44,7 +44,7 @@
     "predeploy": "npm run test",
     "deploy": "npm run build && surge -p public -d https://liftupnepal.com",
     "prerelease": "npm run test",
-    "release": "npm version minor && git push && git push --tags && npm run deploy",
+    "release": "npm version minor && git push --all && git push --tags && npm run deploy",
     "start": "webpack-dev-server",
     "test": "standard"
   }
