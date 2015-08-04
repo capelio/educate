@@ -20,6 +20,7 @@
 - change students/:id/manage/profile|donations routes to student/:id/profile|donations routes (in model/donation.js donationsRoute prop too)
 
 - change image tap action to view fullscreen image
+- setup reminders to renew/redownload certs
 - pull editability of profile image out from the profile-image component. compose the two together in the dashboard. ensure no editability outside of the dashboard (but fullscreen should still work)
 - change layout's signedIn method to use app.me.isAuthenticated
 - add renderSignInLink and renderAccountMenu to layout
