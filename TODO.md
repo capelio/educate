@@ -2,10 +2,9 @@
 
 ## NEXT
 
-- add SSL, force everything over HTTPS
-- test real money donations in production
 - fix spinner "The node to be removed is not a child of this node" bug
 
+- send email receipt for donations
 - add active/inactive mgmt section buttons
 - display donor name on the donation view component
 - after adding a new student, redirect to the student's profile mgmt page
@@ -19,6 +18,8 @@
 - change viewUrl, editUrl, etc to viewRoute, editRoute, etc to distinguish from API URLs
 - change students/:id/manage/profile|donations routes to student/:id/profile|donations routes (in model/donation.js donationsRoute prop too)
 
+- finish hardening nginx as ssl-only reverse proxy
+- finish hardening API server
 - change image tap action to view fullscreen image
 - setup reminders to renew/redownload certs
 - pull editability of profile image out from the profile-image component. compose the two together in the dashboard. ensure no editability outside of the dashboard (but fullscreen should still work)
@@ -82,9 +83,14 @@
 
 ## DONE
 
+### 2015-08-04
+
+- test real money donations in production
+
 ### 2015-08-03
 
 - hook up real donations
+- add SSL, force everything over HTTPS
 
 ### 2015-08-02
 
