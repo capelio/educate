@@ -6,8 +6,8 @@ const config = {
   },
 
   'liftupnepal.com': {
-    apiRoot: '//188.166.94.30:8080',
-    imagesRoot: '//188.166.94.30:8080/images',
+    apiRoot: '//api.liftupnepal.com',
+    imagesRoot: '//api.liftupnepal.com/images',
     stripeKey: 'pk_live_ckG50jcW2G7WkvmYZy0Dfyfn'
   }
 }
