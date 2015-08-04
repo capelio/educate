@@ -50,7 +50,7 @@ export default React.createClass({
           <label htmlFor='menu-toggle'>Menu</label>
 
           <ul className='list-unstyled list-inline cf'>
-            <li>Empower Nepal</li>
+            <li>Lift Up Nepal</li>
             <li><a href='/'>Students in Need</a></li>
             <li><a href='/howitworks'>How it Works</a></li>
             <li className='pull-right'>{this.signedIn() ? <a href='' onClick={this.onSignOut}>Sign Out</a> : <a href='/signin'>Sign In</a>}</li>
