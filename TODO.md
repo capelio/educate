@@ -2,8 +2,6 @@
 
 ## NEXT
 
-- fix spinner "The node to be removed is not a child of this node" bug
-
 - send email receipt for donations
 - add active/inactive mgmt section buttons
 - display donor name on the donation view component
@@ -86,6 +84,7 @@
 ### 2015-08-04
 
 - test real money donations in production
+- fix spinner "The node to be removed is not a child of this node" bug
 
 ### 2015-08-03
 
