@@ -97,6 +97,7 @@ export default React.createClass({
 
     const {student} = this.props
     const form = document.getElementById('payment-form')
+    const paymentErrors = React.findDOMNode(this.refs.paymentErrors)
     const submitButton = React.findDOMNode(this.refs.submitButton)
 
     spinner.start()
@@ -104,7 +105,8 @@ export default React.createClass({
 
     Stripe.card.createToken(form, (status, res) => { // eslint-disable-line no-undef
       if (res.error) {
-        form.querySelector('.payment-errors').text(res.error.message)
+        paymentErrors.style.display = 'block'
+        paymentErrors.innerHTML = res.error.message
 
         spinner.stop()
         submitButton.disabled = false
@@ -165,8 +167,6 @@ export default React.createClass({
                 id='payment-form'
               >
                 <fieldset>
-                  <span className='payment-errors'></span>
-
                   <div className='form-element'>
                     <label htmlFor='donor'>Your Full Name</label>
                     <input
@@ -261,6 +261,8 @@ export default React.createClass({
                       required
                     />
                   </div>
+
+                  <div className='paymentErrors message message-alert' ref='paymentErrors' style={{display: 'none'}}></div>
 
                   <button ref='submitButton' type='submit' className='button button-approve'>Donate</button>&nbsp;
                   <a href={viewUrl} className='button button-neutral'>Cancel</a>
