@@ -96,7 +96,7 @@ export default React.createClass({
     event.preventDefault()
 
     const {student} = this.props
-    const form = document.getElementById('payment-form')
+    const form = React.findDOMNode(this.refs.paymentForm)
     const paymentErrors = React.findDOMNode(this.refs.paymentErrors)
     const submitButton = React.findDOMNode(this.refs.submitButton)
 
@@ -164,7 +164,7 @@ export default React.createClass({
               <form
                 method='POST'
                 onSubmit={this.onSubmitForm}
-                id='payment-form'
+                ref='paymentForm'
               >
                 <fieldset>
                   <div className='form-element'>
