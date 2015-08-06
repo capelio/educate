@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- send email receipt for donations
 - add active/inactive mgmt section buttons
 - display donor name on the donation view component
 - after adding a new student, redirect to the student's profile mgmt page
@@ -47,6 +46,8 @@
 
 ## LATER
 
+- create clean API module for sending email, write mailgun adapter
+- create clean API module for persisting JSON, write leveldb adapter
 - add multiple images for students
 - put API calls behind a api.js module (api.getStudents(), api.getDonation(id), etc))
 - figure out how to deal with updating collection after a model save
@@ -80,6 +81,10 @@
 - use "donate for X years of education" messaging
 
 ## DONE
+
+### 2015-08-06
+
+- send email receipt for donations
 
 ### 2015-08-04
 
