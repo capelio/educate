@@ -2,8 +2,6 @@
 
 ## NEXT
 
-- display donor name on the donation view component
-- when editing a student's profile from the dashboard, return to profile mgmt route on save/cancel
 - add email to manual donations
 - don't allow manual editing of credit card donations
 - only display unfunded students on front page
@@ -84,7 +82,9 @@
 
 - send email receipt for donations
 - add active/inactive mgmt section buttons
+- display donor name on the donation view component
 - after adding a new student, redirect to the student's profile mgmt page
+- when editing a student's profile from the dashboard, return to profile mgmt route on save/cancel
 
 ### 2015-08-04
 
