@@ -150,7 +150,7 @@ export default React.createClass({
 
   render () {
     if (this.state.scriptReady) {
-      const {viewUrl, name, profileImageUrl} = this.props.student
+      const {viewRoute, name, profileImageUrl} = this.props.student
       const {donor, email} = this.state
       const {amount, cvc, expirationMonth, expirationYear, number} = this.state
       const prettyAmount = '$' + (amount ? amount : '')
@@ -265,7 +265,7 @@ export default React.createClass({
                   <div className='paymentErrors message message-alert' ref='paymentErrors' style={{display: 'none'}}></div>
 
                   <button ref='submitButton' type='submit' className='button button-approve'>Donate</button>&nbsp;
-                  <a href={viewUrl} className='button button-neutral'>Cancel</a>
+                  <a href={viewRoute} className='button button-neutral'>Cancel</a>
                 </fieldset>
               </form>
             </div>

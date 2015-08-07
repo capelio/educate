@@ -34,7 +34,7 @@ export default React.createClass({
 
       success () {
         spinner.stop()
-        app.router.history.navigate(student.manageUrl)
+        app.router.history.navigate(student.manageRoute)
       },
 
       error () {

@@ -12,7 +12,7 @@ export default React.createClass({
 
   render () {
     const {student} = this.props
-    const {viewUrl} = student
+    const {viewRoute} = student
     let {story} = student
 
     const cutoff = 480
@@ -23,7 +23,7 @@ export default React.createClass({
     return (
       <div className='student-card grid-flex-container'>
         <div className='grid-flex-cell-1of3'>
-          <a href={viewUrl}>
+          <a href={viewRoute}>
             <figure className='profile-image_figure media-outlined'>
               <img src={student.profileImageUrl} width='300px'/>
             </figure>
@@ -34,9 +34,9 @@ export default React.createClass({
           </div>
         </div>
         <div className='grid-flex-cell'>
-          <a href={viewUrl}><h3 className='name'>{student.name}</h3></a>
+          <a href={viewRoute}><h3 className='name'>{student.name}</h3></a>
 
-          <p className='story'>{story} <span><a href={viewUrl}>Read more</a></span></p>
+          <p className='story'>{story} <span><a href={viewRoute}>Read more</a></span></p>
         </div>
       </div>
     )

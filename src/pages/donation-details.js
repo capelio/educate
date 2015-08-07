@@ -25,7 +25,7 @@ export default React.createClass({
         success: () => {
           spinner.stop()
 
-          app.router.history.navigate(this.props.student.manageDonationsUrl)
+          app.router.history.navigate(this.props.student.manageDonationsRoute)
         },
 
         error () {

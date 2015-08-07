@@ -43,7 +43,7 @@ export default React.createClass({
 
     return (
       <div>
-        <a href={student.editUrl} className='button'>Edit</a>&nbsp;
+        <a href={student.editRoute} className='button'>Edit</a>&nbsp;
         <button onClick={this.onDeactivateClick} className='button button-warn'>Deactivate</button>
       </div>
     )

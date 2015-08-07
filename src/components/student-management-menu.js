@@ -24,9 +24,9 @@ export default React.createClass({
 
     return (
       <nav className='student-management-menu button-group'>
-        <a href={student.manageProfileUrl} className={this.determineButtonClasses('profile', active)}><span className='octicon octicon-book'></span> Profile</a>
-        <a href={student.manageImagesUrl} className={this.determineButtonClasses('images', active)}><span className='octicon octicon-device-camera'></span> Images</a>
-        <a href={student.manageDonationsUrl} className={this.determineButtonClasses('donations', active)}><span className='octicon octicon-credit-card'></span> Donations</a>
+        <a href={student.manageProfileRoute} className={this.determineButtonClasses('profile', active)}><span className='octicon octicon-book'></span> Profile</a>
+        <a href={student.manageImagesRoute} className={this.determineButtonClasses('images', active)}><span className='octicon octicon-device-camera'></span> Images</a>
+        <a href={student.manageDonationsRoute} className={this.determineButtonClasses('donations', active)}><span className='octicon octicon-credit-card'></span> Donations</a>
       </nav>
     )
   }

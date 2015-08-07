@@ -25,7 +25,7 @@ export default React.createClass({
 
   render () {
     const {donations, student} = this.props
-    const {donateUrl} = student
+    const {donateRoute} = student
 
     return (
       <div className='student-details grid-flex-container'>
@@ -39,7 +39,7 @@ export default React.createClass({
           </div>
 
           <div className='donate-button' style={{textAlign: 'center'}}>
-            <a href={donateUrl} className='button'>Donate Now</a>
+            <a href={donateRoute} className='button'>Donate Now</a>
           </div>
 
           <div className='donors-list'>

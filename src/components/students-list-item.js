@@ -17,7 +17,7 @@ export default React.createClass({
 
   render () {
     const {donations, student} = this.props
-    const {goal, manageUrl} = student
+    const {goal, manageRoute} = student
 
     const prettyDate = moment(student.createdAt).format('DD MMM YYYY')
 
@@ -32,7 +32,7 @@ export default React.createClass({
           {prettyDate}
         </td>
         <td>
-          <a href={manageUrl}>{student.name}</a>
+          <a href={manageRoute}>{student.name}</a>
         </td>
         <td>
           {fundingStatus}

@@ -17,6 +17,11 @@ export default Model.extend(tokenMixin, {
     createdAt: 'string',
     updatedAt: 'string',
 
+    funded: {
+      type: 'boolean',
+      default: false
+    },
+
     profileImage: {
       type: 'string',
       default: 'default-profile-image.png'
@@ -28,7 +33,12 @@ export default Model.extend(tokenMixin, {
   },
 
   derived: {
-    viewUrl: {
+    /*
+     * Route properties are URLs for navigating within the application.
+     * They do NOT point to the REST API.
+     */
+
+    viewRoute: {
       deps: ['id'],
 
       fn () {
@@ -52,7 +62,7 @@ export default Model.extend(tokenMixin, {
       }
     },
 
-    donateUrl: {
+    donateRoute: {
       deps: ['id'],
 
       fn () {
@@ -60,7 +70,7 @@ export default Model.extend(tokenMixin, {
       }
     },
 
-    editUrl: {
+    editRoute: {
       deps: ['id'],
 
       fn () {
@@ -68,7 +78,7 @@ export default Model.extend(tokenMixin, {
       }
     },
 
-    manageUrl: {
+    manageRoute: {
       deps: ['id'],
 
       fn () {
@@ -76,7 +86,7 @@ export default Model.extend(tokenMixin, {
       }
     },
 
-    manageDonationsUrl: {
+    manageDonationsRoute: {
       deps: ['id'],
 
       fn () {
@@ -84,7 +94,7 @@ export default Model.extend(tokenMixin, {
       }
     },
 
-    manageImagesUrl: {
+    manageImagesRoute: {
       deps: ['id'],
 
       fn () {
@@ -92,13 +102,17 @@ export default Model.extend(tokenMixin, {
       }
     },
 
-    manageProfileUrl: {
+    manageProfileRoute: {
       deps: ['id'],
 
       fn () {
         return '/students/' + this.id + '/manage/profile'
       }
     },
+
+    /*
+     * URL properties point to the REST API. They are not client routes.
+     */
 
     profileImageUrl: {
       deps: ['profileImage'],
