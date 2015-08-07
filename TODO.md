@@ -6,6 +6,7 @@
 - add page for viewing all students, funded and unfunded, with paging/infinite scroll
 - add paging/infinite scroll to dashboard
 
+- order derived model properties alphabetically
 - change students/:id/manage/profile|donations routes to student/:id/profile|donations routes (in model/donation.js donationsRoute prop too)
 
 - finish hardening nginx as ssl-only reverse proxy
