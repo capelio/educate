@@ -38,27 +38,11 @@ export default Model.extend(tokenMixin, {
      * They do NOT point to the REST API.
      */
 
-    viewRoute: {
-      deps: ['id'],
-
-      fn () {
-        return '/students/' + this.id
-      }
-    },
-
     createDonationRoute: {
       deps: ['id'],
 
       fn () {
         return '/students/' + this.id + '/donations/create'
-      }
-    },
-
-    thankYouRoute: {
-      deps: ['id'],
-
-      fn () {
-        return '/students/' + this.id + '/thankyou'
       }
     },
 
@@ -75,14 +59,6 @@ export default Model.extend(tokenMixin, {
 
       fn () {
         return '/students/' + this.id + '/edit'
-      }
-    },
-
-    manageRoute: {
-      deps: ['id'],
-
-      fn () {
-        return '/students/' + this.id + '/manage'
       }
     },
 
@@ -110,23 +86,47 @@ export default Model.extend(tokenMixin, {
       }
     },
 
+    manageRoute: {
+      deps: ['id'],
+
+      fn () {
+        return '/students/' + this.id + '/manage'
+      }
+    },
+
+    thankYouRoute: {
+      deps: ['id'],
+
+      fn () {
+        return '/students/' + this.id + '/thankyou'
+      }
+    },
+
+    viewRoute: {
+      deps: ['id'],
+
+      fn () {
+        return '/students/' + this.id
+      }
+    },
+
     /*
      * URL properties point to the REST API. They are not client routes.
      */
-
-    profileImageUrl: {
-      deps: ['profileImage'],
-
-      fn () {
-        return app.config.imagesRoot + '/' + this.profileImage
-      }
-    },
 
     donateByCardUrl: {
       deps: ['id'],
 
       fn () {
         return this.url() + '/donate/card'
+      }
+    },
+
+    profileImageUrl: {
+      deps: ['profileImage'],
+
+      fn () {
+        return app.config.imagesRoot + '/' + this.profileImage
       }
     }
   },
