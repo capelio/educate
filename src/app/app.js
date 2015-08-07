@@ -6,11 +6,10 @@ import Me from 'models/me'
 import StudentCollection from 'models/student-collection'
 import trace from 'app/trace'
 
-/*
- * Webpack takes care of injecting styles for us, so we
- * can safely ignore standard's no-unused-vars rule here.
- */
-import styles from 'styles/app.styl' // eslint-disable-line no-unused-vars
+// Require our CSS styles. Webpack takes care of turning the
+// Stylus in CSS as well as link'ing the files in index.html
+require('styles/app.styl')
+require('octicons/octicons/octicons.css')
 
 // Expose app to browser console for easier debugging
 window.app = app

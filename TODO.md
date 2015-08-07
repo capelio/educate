@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- add active/inactive mgmt section buttons
 - display donor name on the donation view component
 - after adding a new student, redirect to the student's profile mgmt page
 - when editing a student's profile from the dashboard, return to profile mgmt route on save/cancel
@@ -85,6 +84,7 @@
 ### 2015-08-06
 
 - send email receipt for donations
+- add active/inactive mgmt section buttons
 
 ### 2015-08-04
 
