@@ -53,6 +53,8 @@ export default React.createClass({
         <p>{prettyAmount}</p>
         <p>{donation.donor}</p>
         <p>{donation.description}</p>
+        <p>{donation.email}</p>
+
         <div>
           <a href={donation.editRoute} className='button'>Edit</a>
           &nbsp;

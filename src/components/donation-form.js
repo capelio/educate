@@ -14,12 +14,13 @@ export default React.createClass({
   },
 
   getInitialState () {
-    const {amount, description, donor} = this.props.donation
+    const {amount, description, donor, email} = this.props.donation
 
     return {
       amount,
       description,
-      donor
+      donor,
+      email
     }
   },
 
@@ -35,6 +36,12 @@ export default React.createClass({
   onDonorChange (event) {
     this.setState({
       donor: event.target.value
+    })
+  },
+
+  onEmailChange (event) {
+    this.setState({
+      email: event.target.value
     })
   },
 
@@ -76,7 +83,7 @@ export default React.createClass({
   },
 
   render () {
-    const {amount, description, donor} = this.state
+    const {amount, description, donor, email} = this.state
     const prettyAmount = '$' + (amount ? amount : '')
 
     return (
@@ -124,6 +131,19 @@ export default React.createClass({
                 name='description'
                 placeholder='Description'
                 required
+              />
+            </div>
+
+            <div className='form-element'>
+              <label htmlFor='email'>Donor's Email Address <span className='optional'>optional</span></label>
+              <input
+                className='form-input'
+                value={email}
+                onChange={this.onEmailChange}
+                type='text'
+                id='email'
+                name='email'
+                placeholder="Donor's Email Address"
               />
             </div>
 

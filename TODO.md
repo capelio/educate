@@ -2,8 +2,6 @@
 
 ## NEXT
 
-- add email to manual donations
-- don't allow manual editing of credit card donations
 - only display unfunded students on front page
 - add page for viewing all students, funded and unfunded, with paging/infinite scroll
 - add paging/infinite scroll to dashboard
@@ -85,6 +83,7 @@
 - display donor name on the donation view component
 - after adding a new student, redirect to the student's profile mgmt page
 - when editing a student's profile from the dashboard, return to profile mgmt route on save/cancel
+- add email to manual donations
 
 ### 2015-08-04
 
