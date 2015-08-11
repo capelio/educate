@@ -17,11 +17,6 @@ export default Model.extend(tokenMixin, {
     createdAt: 'string',
     updatedAt: 'string',
 
-    funded: {
-      type: 'boolean',
-      default: false
-    },
-
     profileImage: {
       type: 'string',
       default: 'default-profile-image.png'

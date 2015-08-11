@@ -2,7 +2,6 @@
 
 ## NEXT
 
-- only display unfunded students on front page
 - add page for viewing all students, funded and unfunded, with paging/infinite scroll
 - add paging/infinite scroll to dashboard
 
@@ -74,6 +73,10 @@
 - use "donate for X years of education" messaging
 
 ## DONE
+
+### 2015-08-11
+
+- only display unfunded students on front page
 
 ### 2015-08-06
 

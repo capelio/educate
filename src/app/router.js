@@ -75,10 +75,14 @@ export default Router.extend({
   },
 
   students () {
-    app.students.fetch({
-      success: () => {
+    app.students.fetchUnfunded(err => {
+      if (err) {
+        modal.open({
+          title: 'Error',
+          body: 'We encountered an error retrieving the students. Please wait a few minutes and try again. If the problem persists, please contact support.'
+        })
+      } else {
         app.students.each(s => s.donations.fetch())
-
         this.renderPage(<StudentsPage students={app.students}/>)
       }
     })
