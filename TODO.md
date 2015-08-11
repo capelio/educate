@@ -2,7 +2,6 @@
 
 ## FIXES
 
-- don't render to document.body
 - get rid of the /manage part of the student route, update model derived routes
 - pull updateability out of the profile image and into its own component
 - change layout's signedIn method to use app.me.isAuthenticated
@@ -73,6 +72,7 @@
 ### 2015-08-11
 
 - only display unfunded students on front page
+- don't render to document.body
 
 ### 2015-08-06
 
