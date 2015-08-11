@@ -44,13 +44,13 @@
   "scripts": {
     "prebuild": "rm -rf public && mkdir public",
     "build": "NODE_ENV=production webpack",
+    "bump": "npm version minor",
     "predeploy": "npm run test",
     "deploy": "npm run build && surge -p public -d https://liftupnepal.com",
     "prerelease": "npm run test",
     "push": "git push --all && git push --tags",
-    "release": "npm run version && npm run push && npm run deploy",
+    "release": "npm run bump && npm run push && npm run deploy",
     "start": "webpack-dev-server",
-    "test": "standard",
-    "version": "npm version minor"
+    "test": "standard"
   }
 }
