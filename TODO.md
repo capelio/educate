@@ -1,76 +1,72 @@
 # TODO
 
-## NEXT
+## FIXES
 
-- add page for viewing all students, funded and unfunded, with paging/infinite scroll
-- add paging/infinite scroll to dashboard
+- don't render to document.body
+- get rid of the /manage part of the student route, update model derived routes
+- pull updateability out of the profile image and into its own component
+- change layout's signedIn method to use app.me.isAuthenticated
+- pull signInLink and accountMenu logic into their own render functions in layout
+- change image tap action to view full size image
+- when focusing $ fields, place cursor after $ character
+- add validation to forms
+- rename cause-list and donation-list to <type>-tabular-list
+- in tabular-lists, make entire row a click/tap target
+- only list organization causes on org dashboard
+- use the Express CORS module
+- collapse hamburger menu after item selection
+- delete student's old profile image when uploading a new one
+- improve flow when encountering an error when viewing a deeplinked page
 
-- change students/:id/manage/profile|donations routes to student/:id/profile|donations routes (in model/donation.js donationsRoute prop too)
+## FEATURES
 
+- rename Students to Causes
+- save orgId to causes
+- create migration to rename students to causes in database
+- add Accounts
+- add Organizations
+- use JWT, Macaroons, or Hawk for authentication
+- add auth/role layer for restricting actions (only owning Org can change a Cause, etc)
+- add Reports to Causes
+- display Organization mission
+- display Organization updates
+- add Ledger to Organizations
+- optimize image uploads, create different sizes
+- create Admin dashboard
+- add multiple Images to Causes
+- add Years of Education concept
+- add Universal and Recurring donations
+- add page for viewing all students, funding and unfunded
+- add paging/infinite scroll to tabular and feature lists
+- change db to append-only log easily read by reducers
+- add "archive" concept to persistence
+- add trace instrumentation across app
+- add Advanced tab to error modals, include stack, HTTP response codes, etc
+- devise a pattern for separating compositional components that need to know about styling from structural components
+- devise validation strategy that can be shared across client (models, forms) and API (express)
+
+## CONTENT
+
+- create a better logo
+- add How it Works content
+
+## PROCESS
+
+- add calendar reminders for renewing/redownloading SSL certs
+- setup commit/tag GPG signing flow
+- convert API to ES6 with Babel
+- split API resources into their own files
+
+## DEVOPS
+
+- ensure pm2 and dropboxd restart on machine restart
 - finish hardening nginx as ssl-only reverse proxy
 - finish hardening API server
-- change image tap action to view fullscreen image
-- setup reminders to renew/redownload certs
-- pull editability of profile image out from the profile-image component. compose the two together in the dashboard. ensure no editability outside of the dashboard (but fullscreen should still work)
-- change layout's signedIn method to use app.me.isAuthenticated
-- add renderSignInLink and renderAccountMenu to layout
-- change deactivate student to archive student
-- update db calls to exclude archived students unless explicitly asked for
-- add/edit/archive student case studies
-- add student/organization relationship to student creation and db process
-- create admin page
-- create org add/edit/archive components
-- create user add/edit/archive components
-- save orgId when saving students
-- only list organization students on dashboard
-- view archived students
-- add expenses page for organizations
-- list students and expenses on organization dashboard
-- add Organizations pages (mission, updates, etc) using Org entered copy (Org settings page?)
-- fix bug when submitting empty signin form
-- when focusing Goal field on student form, place cursor at end of $
-- add $ pretty format to donate form, do focus trick as well
-- make entire summary div a tap target for viewing student details
-- when creating new donation models, do 'studentId: this.parent.id' equiv instead of relying on the API to add it to JSON
-- figure out why image doesn't reload on phone after upload of large image files
-- fix error when: visit deep link student profile -> donate button -> donate $ -> return student profile, $ raised is wrong
-- restart pm2 and dropbox on server restart
 
-## LATER
+## MODULES
 
-- create clean API module for sending email, write mailgun adapter
-- create clean API module for persisting JSON, write leveldb adapter
-- add multiple images for students
-- put API calls behind a api.js module (api.getStudents(), api.getDonation(id), etc))
-- figure out how to deal with updating collection after a model save
-- come up with a pattern for separating compositional layout components (that need to know about Yeti/Bootstrap, etc) from reusable functional components
-- split express routes into routes/resource.js files
-- turn token generator into a module
-- turn db layer into a fully journaled db (easy audit logging, replay, etc)
-- add trace instrumentation
-- add and use express.js cors module
-- use JWT, Macaroons, or Hawk for authentication
-- add real user dashboard pages
-- add validation for funding goal amount during create/update
-- add validation for donation amount on pages/donation
-- collapse menu after selection
-- fix forceUpdate() warnings when editing a student
-- remove the confusion! camelCase everything (JS, CSS, filenames, etc), too many exceptions to remember
-- delete student's old profile image when uploading a new one
-- improve flow when encountering an error viewing a deep link from another website (i.e. going from google.com to students/:id page)
-- show stack trace in error modal using 'Advanced' expansion approach. show HTTP response codes, etc, as well
-- improve the classes = canEdit logic in components/profile-image render()
-- update isPartner/canEdit check for profile images to only allow the partner who owns the student to edit the profile image
-- research image cropping and optimization process (SaaS avail? browser-side JS library?)
-- add validation to express endpoints, use a method that can be reused on the client (is there a way to unify React.PropTypes, Ampersand model definitions, Express param validation, etc?)
-- replace confirm option in student deactivation flow with an Undo option
-- does it make sense to use an ampersand model for uploads? multiple uploaded images, files, etc, would need collections
-- can we add a check for className strings with commas in them to standard or another linter? (common mistake of className='one, two' instead of className='one two')
-- use a currency pretty formatter (commas, etc)
-- convert API to ES6 using Babel
-- setup commit/tag GPG signing flows
-- add universal and recurring donations
-- use "donate for X years of education" messaging
+- publish clean API for sending email, publish mailgun adapter
+- publish clean API for writing JSON to a append-only log, publish leveldb adapter
 
 ## DONE
 
