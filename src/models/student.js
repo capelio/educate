@@ -61,7 +61,7 @@ export default Model.extend(tokenMixin, {
       deps: ['id'],
 
       fn () {
-        return '/students/' + this.id + '/manage/donations'
+        return '/students/' + this.id + '/donations'
       }
     },
 
@@ -69,7 +69,7 @@ export default Model.extend(tokenMixin, {
       deps: ['id'],
 
       fn () {
-        return '/students/' + this.id + '/manage/images'
+        return '/students/' + this.id + '/images'
       }
     },
 
@@ -77,15 +77,7 @@ export default Model.extend(tokenMixin, {
       deps: ['id'],
 
       fn () {
-        return '/students/' + this.id + '/manage/profile'
-      }
-    },
-
-    manageRoute: {
-      deps: ['id'],
-
-      fn () {
-        return '/students/' + this.id + '/manage'
+        return '/students/' + this.id + '/profile'
       }
     },
 

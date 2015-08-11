@@ -2,7 +2,6 @@
 
 ## FIXES
 
-- get rid of the /manage part of the student route, update model derived routes
 - pull updateability out of the profile image and into its own component
 - change layout's signedIn method to use app.me.isAuthenticated
 - pull signInLink and accountMenu logic into their own render functions in layout
@@ -73,6 +72,7 @@
 
 - only display unfunded students on front page
 - don't render to document.body
+- get rid of the /manage part of the student route, update model derived routes
 
 ### 2015-08-06
 
