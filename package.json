@@ -42,7 +42,6 @@
     "yeticss": "^6.0.7"
   },
   "scripts": {
-    "prebuild": "rm -rf public && mkdir public",
     "build": "NODE_ENV=production webpack",
     "bump": "npm version minor",
     "predeploy": "npm run test",
