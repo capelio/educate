@@ -9,10 +9,6 @@ export default React.createClass({
     children: React.PropTypes.object
   },
 
-  signedIn () {
-    return !!app.me.token
-  },
-
   onSignOut (event) {
     event.preventDefault()
 
@@ -43,6 +39,8 @@ export default React.createClass({
   },
 
   render () {
+    const {isAuthenticated} = app.me
+
     return (
       <NavHelper>
         <nav className='top-nav top-nav-dark cf' role='navigation'>
@@ -53,8 +51,8 @@ export default React.createClass({
             <li>Lift Up Nepal</li>
             <li><a href='/'>Students in Need</a></li>
             <li><a href='/howitworks'>How it Works</a></li>
-            <li className='pull-right'>{this.signedIn() ? <a href='' onClick={this.onSignOut}>Sign Out</a> : <a href='/signin'>Sign In</a>}</li>
-            {this.signedIn() ? <li className='pull-right'><a href='/dashboard'>Dashboard</a></li> : ''}
+            <li className='pull-right'>{isAuthenticated ? <a href='' onClick={this.onSignOut}>Sign Out</a> : <a href='/signin'>Sign In</a>}</li>
+            {isAuthenticated ? <li className='pull-right'><a href='/dashboard'>Dashboard</a></li> : ''}
           </ul>
         </nav>
 
