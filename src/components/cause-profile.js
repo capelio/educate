@@ -6,20 +6,20 @@ export default React.createClass({
   mixins: [ampersandMixin],
 
   propTypes: {
-    student: React.PropTypes.object
+    cause: React.PropTypes.object
   },
 
   render () {
-    const {student} = this.props
+    const {cause} = this.props
 
     return (
-      <div className='student-profile'>
-        <h3>{student.name}</h3>
+      <div className='cause-profile'>
+        <h3>{cause.name}</h3>
 
-        <p>Funding Goal: ${student.goal}</p>
+        <p>Funding Goal: ${cause.goal}</p>
 
         <FormattedText>
-          {student.story}
+          {cause.story}
         </FormattedText>
       </div>
     )

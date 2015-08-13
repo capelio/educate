@@ -5,13 +5,13 @@ import tokenMixin from 'helpers/token-mixin'
 
 export default Model.extend(tokenMixin, {
   urlRoot () {
-    return app.config.apiRoot + '/students/' + this.studentId + '/donations'
+    return app.config.apiRoot + '/causes/' + this.causeId + '/donations'
   },
 
   props: {
     id: 'string',
     chargeId: 'string',
-    studentId: 'string',
+    causeId: 'string',
     amount: 'number',
     description: 'string',
     donor: 'string',
@@ -22,10 +22,10 @@ export default Model.extend(tokenMixin, {
 
   derived: {
     donationsRoute: {
-      deps: ['studentId'],
+      deps: ['causeId'],
 
       fn () {
-        return '/students/' + this.studentId + '/manage/donations'
+        return '/causes/' + this.causeId + '/donations'
       }
     },
 
@@ -41,7 +41,7 @@ export default Model.extend(tokenMixin, {
       deps: ['id'],
 
       fn () {
-        return '/students/' + this.studentId + '/donations/' + this.id
+        return '/causes/' + this.causeId + '/donations/' + this.id
       }
     }
   }

@@ -1,20 +1,20 @@
 import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
 
-import StudentsListItem from 'components/students-list-item'
+import CausesTabularListItem from 'components/causes-tabular-list-item'
 
 export default React.createClass({
   mixins: [ampersandMixin],
 
   propTypes: {
-    students: React.PropTypes.object
+    causes: React.PropTypes.object
   },
 
   render () {
-    const {students} = this.props
+    const {causes} = this.props
 
     return (
-      <div className='students-list'>
+      <div className='causes-tabular-list'>
         <table className='table-striped'>
           <thead>
             <tr>
@@ -24,12 +24,12 @@ export default React.createClass({
             </tr>
           </thead>
           <tbody>
-            {students.map(s => {
+            {causes.map(cause => {
               return (
-                <StudentsListItem
-                  key={s.id}
-                  student={s}
-                  donations={s.donations}
+                <CausesTabularListItem
+                  key={cause.id}
+                  cause={cause}
+                  donations={cause.donations}
                 />
               )
             })}

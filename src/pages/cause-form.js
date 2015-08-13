@@ -1,21 +1,21 @@
 import React from 'react'
 import ampersandMixin from 'ampersand-react-mixin'
 
-import StudentForm from 'components/student-form'
+import CauseForm from 'forms/cause'
 
 export default React.createClass({
   mixins: [ampersandMixin],
 
   propTypes: {
-    student: React.PropTypes.object
+    cause: React.PropTypes.object
   },
 
   render () {
-    const {student} = this.props
+    const {cause} = this.props
 
     return (
-      <div className='student-form-page'>
-        <StudentForm student={student}/>
+      <div className='cause-form-page'>
+        <CauseForm cause={cause}/>
       </div>
     )
   }

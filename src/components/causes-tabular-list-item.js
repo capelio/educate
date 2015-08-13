@@ -7,19 +7,19 @@ export default React.createClass({
   mixins: [ampersandMixin],
 
   propTypes: {
-    donations: React.PropTypes.object,
-    student: React.PropTypes.object
+    cause: React.PropTypes.object,
+    donations: React.PropTypes.object
   },
 
   onArchiveClick (event) {
-    app.trace('archive student')
+    app.trace('archive cause')
   },
 
   render () {
-    const {donations, student} = this.props
-    const {goal, manageProfileRoute} = student
+    const {cause, donations} = this.props
+    const {goal, manageProfileRoute} = cause
 
-    const prettyDate = moment(student.createdAt).format('DD MMM YYYY')
+    const prettyDate = moment(cause.createdAt).format('DD MMM YYYY')
 
     const startTotalAt = 0
     const raised = donations.reduce((total, d) => total + d.amount, startTotalAt)
@@ -32,7 +32,7 @@ export default React.createClass({
           {prettyDate}
         </td>
         <td>
-          <a href={manageProfileRoute}>{student.name}</a>
+          <a href={manageProfileRoute}>{cause.name}</a>
         </td>
         <td>
           {fundingStatus}

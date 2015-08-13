@@ -9,8 +9,8 @@ export default React.createClass({
   mixins: [ampersandMixin],
 
   propTypes: {
-    donations: React.PropTypes.object,
-    student: React.PropTypes.object
+    cause: React.PropTypes.object,
+    donations: React.PropTypes.object
   },
 
   renderDonorsList () {
@@ -24,18 +24,18 @@ export default React.createClass({
   },
 
   render () {
-    const {donations, student} = this.props
-    const {donateRoute} = student
+    const {cause, donations} = this.props
+    const {donateRoute} = cause
 
     return (
-      <div className='student-details grid-flex-container'>
+      <div className='cause-details grid-flex-container'>
         <div className='grid-flex-cell-1of3'>
           <figure className='media-outlined'>
-            <img src={student.profileImageUrl} width='300px'/>
+            <img src={cause.profileImageUrl} width='300px'/>
           </figure>
 
           <div className='funding-summary' style={{textAlign: 'center'}}>
-            <FundingSummary student={student} donations={donations}/>
+            <FundingSummary cause={cause} donations={donations}/>
           </div>
 
           <div className='donate-button' style={{textAlign: 'center'}}>
@@ -49,10 +49,10 @@ export default React.createClass({
         </div>
 
         <div className='grid-flex-cell'>
-          <h3 className='name'>{student.name}</h3>
+          <h3 className='name'>{cause.name}</h3>
 
           <FormattedText>
-            {student.story}
+            {cause.story}
           </FormattedText>
         </div>
       </div>

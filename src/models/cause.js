@@ -6,7 +6,7 @@ import tokenMixin from 'helpers/token-mixin'
 
 export default Model.extend(tokenMixin, {
   urlRoot () {
-    return app.config.apiRoot + '/students'
+    return app.config.apiRoot + '/causes'
   },
 
   props: {
@@ -37,7 +37,7 @@ export default Model.extend(tokenMixin, {
       deps: ['id'],
 
       fn () {
-        return '/students/' + this.id + '/donations/create'
+        return '/causes/' + this.id + '/donations/create'
       }
     },
 
@@ -45,7 +45,7 @@ export default Model.extend(tokenMixin, {
       deps: ['id'],
 
       fn () {
-        return '/students/' + this.id + '/donate'
+        return '/causes/' + this.id + '/donate'
       }
     },
 
@@ -53,7 +53,7 @@ export default Model.extend(tokenMixin, {
       deps: ['id'],
 
       fn () {
-        return '/students/' + this.id + '/edit'
+        return '/causes/' + this.id + '/edit'
       }
     },
 
@@ -61,7 +61,7 @@ export default Model.extend(tokenMixin, {
       deps: ['id'],
 
       fn () {
-        return '/students/' + this.id + '/donations'
+        return '/causes/' + this.id + '/donations'
       }
     },
 
@@ -69,7 +69,7 @@ export default Model.extend(tokenMixin, {
       deps: ['id'],
 
       fn () {
-        return '/students/' + this.id + '/images'
+        return '/causes/' + this.id + '/images'
       }
     },
 
@@ -77,7 +77,7 @@ export default Model.extend(tokenMixin, {
       deps: ['id'],
 
       fn () {
-        return '/students/' + this.id + '/profile'
+        return '/causes/' + this.id + '/profile'
       }
     },
 
@@ -85,7 +85,7 @@ export default Model.extend(tokenMixin, {
       deps: ['id'],
 
       fn () {
-        return '/students/' + this.id + '/thankyou'
+        return '/causes/' + this.id + '/thankyou'
       }
     },
 
@@ -93,7 +93,7 @@ export default Model.extend(tokenMixin, {
       deps: ['id'],
 
       fn () {
-        return '/students/' + this.id
+        return '/causes/' + this.id
       }
     },
 

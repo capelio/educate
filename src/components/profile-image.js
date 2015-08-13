@@ -10,7 +10,7 @@ export default React.createClass({
   mixins: [ampersandMixin],
 
   propTypes: {
-    student: React.PropTypes.object,
+    cause: React.PropTypes.object,
     canEdit: React.PropTypes.bool
   },
 
@@ -23,7 +23,7 @@ export default React.createClass({
   onFileChange (event) {
     event.preventDefault()
 
-    const {student} = this.props
+    const {cause} = this.props
     const url = app.config.apiRoot + '/uploads/images'
     const file = event.target.files[0]
     const extension = file.name.slice(file.name.lastIndexOf('.'))
@@ -43,7 +43,7 @@ export default React.createClass({
             body: 'We encountered an error while uploading the new profile image. Please wait a few minutes and try again. If the problem persists, please contact support.'
           })
         } else {
-          student.save({
+          cause.save({
             profileImage: res.body.filename + extension
           }, {
             wait: true,
@@ -57,7 +57,7 @@ export default React.createClass({
 
               modal.open({
                 title: 'Error',
-                body: 'We encountered an error while updating the student. Please wait a few minutes and try again. If the problem persists, please contact support.'
+                body: 'We encountered an error while updating the cause. Please wait a few minutes and try again. If the problem persists, please contact support.'
               })
             }
           })
@@ -66,7 +66,7 @@ export default React.createClass({
   },
 
   render () {
-    const {student, canEdit} = this.props
+    const {cause, canEdit} = this.props
 
     let classes
     if (canEdit) {
@@ -78,7 +78,7 @@ export default React.createClass({
     return (
       <div className={classes} onClick={this.onClick}>
         <figure className='profile-image_figure media-outlined'>
-          <img src={student.profileImageUrl}/>
+          <img src={cause.profileImageUrl}/>
           <figcaption style={{display: canEdit ? 'block' : 'none'}}>Tap image to change</figcaption>
         </figure>
         <input {...this.props} id='fileSelect' ref='fileSelect' style={{display: 'none'}} type='file' onChange={this.onFileChange} accept='image/*'/>

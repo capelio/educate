@@ -2,14 +2,14 @@ import app from 'ampersand-app'
 import Collection from 'ampersand-rest-collection'
 import request from 'superagent'
 
-import Student from 'models/student'
+import Cause from 'models/cause'
 import tokenMixin from 'helpers/token-mixin'
 
 export default Collection.extend(tokenMixin, {
-  model: Student,
+  model: Cause,
 
   url () {
-    return app.config.apiRoot + '/students'
+    return app.config.apiRoot + '/causes'
   },
 
   fetchFunded (callback) {
@@ -18,7 +18,7 @@ export default Collection.extend(tokenMixin, {
       .end(function (err, res) {
         if (err) return callback(err)
 
-        app.students.add(res.body)
+        app.causes.add(res.body)
         callback(null)
       })
   },
@@ -29,7 +29,7 @@ export default Collection.extend(tokenMixin, {
       .end(function (err, res) {
         if (err) return callback(err)
 
-        app.students.add(res.body)
+        app.causes.add(res.body)
         callback(null)
       })
   }

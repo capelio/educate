@@ -5,14 +5,14 @@ import moment from 'moment'
 
 import modal from 'helpers/modal'
 import spinner from 'helpers/spinner'
-import StudentManagementMenu from 'components/student-management-menu'
+import CauseMgmtMenu from 'components/cause-mgmt-menu'
 
 export default React.createClass({
   mixins: [ampersandMixin],
 
   propTypes: {
-    donation: React.PropTypes.object,
-    student: React.PropTypes.object
+    cause: React.PropTypes.object,
+    donation: React.PropTypes.object
   },
 
   onRemoveClick (event) {
@@ -25,7 +25,7 @@ export default React.createClass({
         success: () => {
           spinner.stop()
 
-          app.router.history.navigate(this.props.student.manageDonationsRoute)
+          app.router.history.navigate(this.props.cause.manageDonationsRoute)
         },
 
         error () {
@@ -41,13 +41,13 @@ export default React.createClass({
   },
 
   render () {
-    const {donation, student} = this.props
+    const {donation, cause} = this.props
     const prettyDate = moment(donation.createdAt).format('DD MMM YYYY')
     const prettyAmount = '$' + donation.amount
 
     return (
       <div className='donation-details'>
-        <StudentManagementMenu student={student} active='donations'/>
+        <CauseMgmtMenu cause={cause} active='donations'/>
 
         <p>{prettyDate}</p>
         <p>{prettyAmount}</p>

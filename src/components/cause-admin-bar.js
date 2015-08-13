@@ -10,14 +10,14 @@ export default React.createClass({
 
   propTypes: {
     deactivateRedirect: React.PropTypes.string,
-    student: React.PropTypes.object
+    cause: React.PropTypes.object
   },
 
   onDeactivateClick () {
-    if (window.confirm('Are you sure you want to deactivate this student?')) {
+    if (window.confirm('Are you sure you want to deactivate this cause?')) {
       spinner.start()
 
-      this.props.student.destroy({
+      this.props.cause.destroy({
         wait: true,
 
         success: () => {
@@ -31,7 +31,7 @@ export default React.createClass({
 
           modal.open({
             title: 'Error',
-            body: 'We encountered an error while deactivating the student. Please wait a few minutes and try again. If the problem persists, please contact support.'
+            body: 'We encountered an error while deactivating the cause. Please wait a few minutes and try again. If the problem persists, please contact support.'
           })
         }
       })
@@ -39,11 +39,11 @@ export default React.createClass({
   },
 
   render () {
-    const {student} = this.props
+    const {cause} = this.props
 
     return (
       <div>
-        <a href={student.editRoute} className='button'>Edit</a>&nbsp;
+        <a href={cause.editRoute} className='button'>Edit</a>&nbsp;
         <button onClick={this.onDeactivateClick} className='button button-warn'>Deactivate</button>
       </div>
     )

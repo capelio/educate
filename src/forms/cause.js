@@ -9,11 +9,11 @@ export default React.createClass({
   mixins: [ampersandMixin],
 
   propTypes: {
-    student: React.PropTypes.object
+    cause: React.PropTypes.object
   },
 
   getInitialState () {
-    const {goal, name, story} = this.props.student
+    const {goal, name, story} = this.props.cause
 
     return {
       goal,
@@ -25,16 +25,16 @@ export default React.createClass({
   onSubmitForm (event) {
     event.preventDefault()
 
-    const {student} = this.props
+    const {cause} = this.props
 
     spinner.start()
 
-    student.save(this.state, {
+    cause.save(this.state, {
       wait: true,
 
       success () {
         spinner.stop()
-        app.router.history.navigate(student.manageProfileRoute)
+        app.router.history.navigate(cause.manageProfileRoute)
       },
 
       error () {
@@ -42,7 +42,7 @@ export default React.createClass({
 
         modal.open({
           title: 'Error',
-          body: 'We encountered an error while creating the new student. Please wait a few minutes and try again. If the problem persists, please contact support.'
+          body: 'We encountered an error while creating the new cause. Please wait a few minutes and try again. If the problem persists, please contact support.'
         })
       }
     })
@@ -79,7 +79,7 @@ export default React.createClass({
     let prettyGoal = '$' + (goal ? goal : '')
 
     return (
-      <form className='student-form' onSubmit={this.onSubmitForm}>
+      <form className='cause-form' onSubmit={this.onSubmitForm}>
         <fieldset>
           <legend>Student Details</legend>
 

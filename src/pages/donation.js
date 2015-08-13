@@ -10,7 +10,7 @@ export default React.createClass({
   mixins: [ReactScriptLoaderMixin],
 
   propTypes: {
-    student: React.PropTypes.object
+    cause: React.PropTypes.object
   },
 
   getInitialState () {
@@ -95,7 +95,7 @@ export default React.createClass({
   onSubmitForm (event) {
     event.preventDefault()
 
-    const {student} = this.props
+    const {cause} = this.props
     const form = React.findDOMNode(this.refs.paymentForm)
     const paymentErrors = React.findDOMNode(this.refs.paymentErrors)
     const submitButton = React.findDOMNode(this.refs.submitButton)
@@ -122,7 +122,7 @@ export default React.createClass({
           token: res.id
         }
 
-        request.post(student.donateByCardUrl)
+        request.post(cause.donateByCardUrl)
           .send(body)
           .end(function (err, res) {
             if (err) {
@@ -136,12 +136,12 @@ export default React.createClass({
 
               // TODO: log error
             } else {
-              student.donations.add(res.body)
+              cause.donations.add(res.body)
 
               spinner.stop()
               submitButton.disabled = false
 
-              app.router.history.navigate(student.thankYouRoute)
+              app.router.history.navigate(cause.thankYouRoute)
             }
           })
       }
@@ -150,7 +150,7 @@ export default React.createClass({
 
   render () {
     if (this.state.scriptReady) {
-      const {viewRoute, name, profileImageUrl} = this.props.student
+      const {name, profileImageUrl, viewRoute} = this.props.cause
       const {donor, email} = this.state
       const {amount, cvc, expirationMonth, expirationYear, number} = this.state
       const prettyAmount = '$' + (amount ? amount : '')

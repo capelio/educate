@@ -4,6 +4,12 @@ import Router from 'ampersand-router'
 
 // Layout and Pages
 import Layout from 'app/layout'
+import CauseDetailsPage from 'pages/cause-details'
+import CauseFormPage from 'pages/cause-form'
+import CauseDonationsMgmtPage from 'pages/cause-donations-mgmt'
+import CauseImagesMgmtPage from 'pages/cause-images-mgmt'
+import CauseProfileMgmtPage from 'pages/cause-profile-mgmt'
+import CausesPage from 'pages/causes'
 import DashboardPage from 'pages/dashboard'
 import DonationPage from 'pages/donation'
 import DonationDetailsPage from 'pages/donation-details'
@@ -11,16 +17,12 @@ import DonationFormPage from 'pages/donation-form'
 import HowItWorksPage from 'pages/how-it-works'
 import MessagePage from 'pages/message'
 import SignInPage from 'pages/sign-in'
-import StudentDetailsPage from 'pages/student-details'
-import StudentFormPage from 'pages/student-form'
-import StudentDonationsManagementPage from 'pages/student-donations-management'
-import StudentImagesManagementPage from 'pages/student-images-management'
-import StudentProfileManagementPage from 'pages/student-profile-management'
-import StudentsPage from 'pages/students'
 
-// Models and Helpers
+// Models
+import Cause from 'models/cause'
 import Donation from 'models/donation'
-import Student from 'models/student'
+
+// Helpers
 import modal from 'helpers/modal'
 
 function auth (handler) {
@@ -47,21 +49,21 @@ export default Router.extend({
   },
 
   routes: {
-    '': 'students',
+    '': 'viewCauses',
+    'causes/create': auth('createCause'),
+    'causes/:id': 'viewCause',
+    'causes/:id/donate': 'donate',
+    'causes/:id/donations/create': auth('createDonation'),
+    'causes/:id/edit': auth('editCause'),
+    'causes/:id/donations': auth('viewCauseDonations'),
+    'causes/:id/images': auth('viewCauseImages'),
+    'causes/:id/profile': auth('viewCauseProfile'),
+    'causes/:id/thankyou': 'donationConfirmation',
+    'causes/:causeId/donations/:id': auth('viewDonation'),
+    'causes/:causeId/donations/:id/edit': auth('editDonation'),
     'dashboard': auth('dashboard'),
     'howitworks': 'howItWorks',
     'signin': 'signIn',
-    'students/create': auth('createStudent'),
-    'students/:id': 'viewStudent',
-    'students/:id/donate': 'donate',
-    'students/:id/donations/create': auth('createDonation'),
-    'students/:id/edit': auth('editStudent'),
-    'students/:id/donations': auth('manageStudentDonations'),
-    'students/:id/images': auth('manageStudentImages'),
-    'students/:id/profile': auth('manageStudentProfile'),
-    'students/:id/thankyou': 'donationConfirmation',
-    'students/:studentId/donations/:id': auth('viewDonation'),
-    'students/:studentId/donations/:id/edit': auth('editDonation'),
     '*path': 'notFound'
   },
 
@@ -73,158 +75,157 @@ export default Router.extend({
     this.renderPage(<SignInPage/>)
   },
 
-  students () {
-    app.students.fetchUnfunded(err => {
+  viewCauses () {
+    app.causes.fetchUnfunded(err => {
       if (err) {
         modal.open({
           title: 'Error',
-          body: 'We encountered an error retrieving the students. Please wait a few minutes and try again. If the problem persists, please contact support.'
+          body: 'We encountered an error. Please wait a few minutes and try again. If the problem persists, please contact support.'
         })
       } else {
-        app.students.each(s => s.donations.fetch())
-        this.renderPage(<StudentsPage students={app.students}/>)
+        app.causes.each(cause => cause.donations.fetch())
+        this.renderPage(<CausesPage causes={app.causes}/>)
       }
     })
   },
 
-  createStudent () {
-    const student = new Student()
-
-    this.renderPage(<StudentFormPage student={student}/>)
+  createCause () {
+    const cause = new Cause()
+    this.renderPage(<CauseFormPage cause={cause}/>)
   },
 
-  viewStudent (id) {
-    app.students.fetchById(id, (err, student) => {
+  viewCause (id) {
+    app.causes.fetchById(id, (err, cause) => {
       if (err) {
         modal.open({
           title: 'Error',
-          body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problem persists, please contact support.'
+          body: 'We encountered an error. Please wait a few minutes and try again. If the problem persists, please contact support.'
         })
       } else {
-        student.donations.fetch()
-        this.renderPage(<StudentDetailsPage student={student}/>)
+        cause.donations.fetch()
+        this.renderPage(<CauseDetailsPage cause={cause}/>)
       }
     })
   },
 
   donate (id) {
-    app.students.fetchById(id, (err, student) => {
+    app.causes.fetchById(id, (err, cause) => {
       if (err) {
         modal.open({
           title: 'Error',
-          body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problem persists, please contact support.'
+          body: 'We encountered an error. Please wait a few minutes and try again. If the problem persists, please contact support.'
         })
       } else {
-        this.renderPage(<DonationPage student={student}/>)
+        this.renderPage(<DonationPage cause={cause}/>)
       }
     })
   },
 
-  editStudent (id) {
-    app.students.fetchById(id, (err, student) => {
+  editCause (id) {
+    app.causes.fetchById(id, (err, cause) => {
       if (err) {
         modal.open({
           title: 'Error',
-          body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problem persists, please contact support.'
+          body: 'We encountered an error. Please wait a few minutes and try again. If the problem persists, please contact support.'
         })
       } else {
-        this.renderPage(<StudentFormPage student={student}/>)
+        this.renderPage(<CauseFormPage cause={cause}/>)
       }
     })
   },
 
-  manageStudentDonations (id) {
-    app.students.fetchById(id, (err, student) => {
+  viewCauseDonations (id) {
+    app.causes.fetchById(id, (err, cause) => {
       if (err) {
         modal.open({
           title: 'Error',
-          body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problem persists, please contact support.'
+          body: 'We encountered an error. Please wait a few minutes and try again. If the problem persists, please contact support.'
         })
       } else {
-        this.renderPage(<StudentDonationsManagementPage student={student}/>)
+        this.renderPage(<CauseDonationsMgmtPage cause={cause}/>)
       }
     })
   },
 
-  manageStudentImages (id) {
-    app.students.fetchById(id, (err, student) => {
+  viewCauseImages (id) {
+    app.causes.fetchById(id, (err, cause) => {
       if (err) {
         modal.open({
           title: 'Error',
-          body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problem persists, please contact support.'
+          body: 'We encountered an error. Please wait a few minutes and try again. If the problem persists, please contact support.'
         })
       } else {
-        this.renderPage(<StudentImagesManagementPage student={student}/>)
+        this.renderPage(<CauseImagesMgmtPage cause={cause}/>)
       }
     })
   },
 
-  manageStudentProfile (id) {
-    app.students.fetchById(id, (err, student) => {
+  viewCauseProfile (id) {
+    app.causes.fetchById(id, (err, cause) => {
       if (err) {
         modal.open({
           title: 'Error',
-          body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problem persists, please contact support.'
+          body: 'We encountered an error. Please wait a few minutes and try again. If the problem persists, please contact support.'
         })
       } else {
-        this.renderPage(<StudentProfileManagementPage student={student}/>)
+        this.renderPage(<CauseProfileMgmtPage cause={cause}/>)
       }
     })
   },
 
   createDonation (id) {
-    app.students.fetchById(id, (err, student) => {
+    app.causes.fetchById(id, (err, cause) => {
       if (err) {
         modal.open({
           title: 'Error',
-          body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problem persists, please contact support.'
+          body: 'We encountered an error. Please wait a few minutes and try again. If the problem persists, please contact support.'
         })
       } else {
-        const donation = new Donation({studentId: student.id})
+        const donation = new Donation({causeId: cause.id})
 
-        this.renderPage(<DonationFormPage student={student} donation={donation}/>)
+        this.renderPage(<DonationFormPage cause={cause} donation={donation}/>)
       }
     })
   },
 
-  viewDonation (studentId, id) {
-    app.students.fetchById(studentId, (err, student) => {
+  viewDonation (causeId, id) {
+    app.causes.fetchById(causeId, (err, cause) => {
       if (err) {
         modal.open({
           title: 'Error',
-          body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problem persists, please contact support.'
+          body: 'We encountered an error. Please wait a few minutes and try again. If the problem persists, please contact support.'
         })
       } else {
-        student.donations.fetchById(id, (err, donation) => {
+        cause.donations.fetchById(id, (err, donation) => {
           if (err) {
             modal.open({
               title: 'Error',
               body: 'We encountered an error retrieving the donation. Please wait a few minutes and try again. If the problem persists, please contact support.'
             })
           } else {
-            this.renderPage(<DonationDetailsPage student={student} donation={donation}/>)
+            this.renderPage(<DonationDetailsPage cause={cause} donation={donation}/>)
           }
         })
       }
     })
   },
 
-  editDonation (studentId, id) {
-    app.students.fetchById(studentId, (err, student) => {
+  editDonation (causeId, id) {
+    app.causes.fetchById(causeId, (err, cause) => {
       if (err) {
         modal.open({
           title: 'Error',
-          body: 'We encountered an error retrieving the student. Please wait a few minutes and try again. If the problem persists, please contact support.'
+          body: 'We encountered an error. Please wait a few minutes and try again. If the problem persists, please contact support.'
         })
       } else {
-        student.donations.fetchById(id, (err, donation) => {
+        cause.donations.fetchById(id, (err, donation) => {
           if (err) {
             modal.open({
               title: 'Error',
               body: 'We encountered an error retrieving the donation. Please wait a few minutes and try again. If the problem persists, please contact support.'
             })
           } else {
-            this.renderPage(<DonationFormPage student={student} donation={donation}/>)
+            this.renderPage(<DonationFormPage cause={cause} donation={donation}/>)
           }
         })
       }
@@ -232,11 +233,11 @@ export default Router.extend({
   },
 
   dashboard () {
-    app.students.fetch({
+    app.causes.fetch({
       success: () => {
-        app.students.each(s => s.donations.fetch())
+        app.causes.each(cause => cause.donations.fetch())
 
-        this.renderPage(<DashboardPage students={app.students}/>)
+        this.renderPage(<DashboardPage causes={app.causes}/>)
       }
     })
   },

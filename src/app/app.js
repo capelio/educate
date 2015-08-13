@@ -3,7 +3,7 @@ import app from 'ampersand-app'
 import config from 'app/config'
 import Router from 'app/router'
 import Me from 'models/me'
-import StudentCollection from 'models/student-collection'
+import CauseCollection from 'models/cause-collection'
 import trace from 'app/trace'
 
 // Require our CSS styles. Webpack takes care of turning the
@@ -17,7 +17,7 @@ window.app = app
 app.extend({
   init () {
     this.me = new Me()
-    this.students = new StudentCollection()
+    this.causes = new CauseCollection()
 
     this.router = new Router()
     this.router.history.start()

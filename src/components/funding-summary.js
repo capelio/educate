@@ -5,13 +5,13 @@ export default React.createClass({
   mixins: [ampersandMixin],
 
   propTypes: {
-    donations: React.PropTypes.object,
-    student: React.PropTypes.object
+    cause: React.PropTypes.object,
+    donations: React.PropTypes.object
   },
 
   render () {
-    const {donations, student} = this.props
-    const {goal} = student
+    const {cause, donations} = this.props
+    const {goal} = cause
 
     const startTotalAt = 0
     const raised = donations.reduce((total, d) => total + d.amount, startTotalAt)

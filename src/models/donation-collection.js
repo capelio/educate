@@ -8,6 +8,6 @@ export default Collection.extend(tokenMixin, {
   model: Donation,
 
   url () {
-    return app.config.apiRoot + '/students/' + this.parent.id + '/donations'
+    return app.config.apiRoot + '/causes/' + this.parent.id + '/donations'
   }
 })
