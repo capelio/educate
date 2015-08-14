@@ -15,7 +15,7 @@ export default React.createClass({
     const {cause} = this.props
 
     return (
-      <div className='cause-donations-management'>
+      <div className='cause-donations-mgmt'>
         <CauseMgmtMenu cause={cause} active='donations'/>
 
         <h3>{cause.name} Donations</h3>
