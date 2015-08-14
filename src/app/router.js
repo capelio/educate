@@ -45,7 +45,7 @@ export default Router.extend({
       )
     }
 
-    React.render(page, document.body)
+    React.render(page, document.getElementById('app'))
   },
 
   routes: {

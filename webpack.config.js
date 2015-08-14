@@ -1,4 +1,3 @@
-var fs = require('fs')
 var getConfig = require('hjs-webpack')
 
 module.exports = getConfig({
@@ -8,13 +7,12 @@ module.exports = getConfig({
   isDev: process.env.NODE_ENV !== 'production',
 
   html: function (context) {
-    var path = './src/index.html'
-    var opts = { encoding: 'utf8' }
-    var file = fs.readFileSync(path, opts)
+    var template = context.defaultTemplate()
+    template = template.replace(/<body>/, '<body><div id="app"></div>')
 
     return {
-      '200.html': file,
-      'index.html': file
+      '200.html': template,
+      'index.html': template
     }
   }
 })
