@@ -2,12 +2,13 @@
 
 ## FIXES
 
+- don't persist empty-string email addresses when saving donations
+- split modal error objects into their own file
 - pull updateability out of the profile image and into its own component
 - pull signInLink and accountMenu logic into their own render functions in layout
 - change image tap action to view full size image
 - when focusing $ fields, place cursor after $ character
 - add validation to forms
-- rename cause-list and donation-list to <type>-tabular-list
 - in tabular-lists, make entire row a click/tap target
 - only list organization causes on org dashboard
 - use the Express CORS module
@@ -17,9 +18,15 @@
 
 ## FEATURES
 
-- rename Students to Causes
+- rename cause.name to cause.title
+- rename cause profile to something less studenty
+- turn <type>-tabular-list into a reusable tabular-list
+- rename ProfileImage to Image
+- rename pages/donation something else
+- rename dashboard to org-dashboard
+- rename donation-details to donation
+- move forms into forms folder
 - save orgId to causes
-- create migration to rename students to causes in database
 - add Accounts
 - add Organizations
 - use JWT, Macaroons, or Hawk for authentication
@@ -66,6 +73,15 @@
 - publish clean API for writing JSON to a append-only log, publish leveldb adapter
 
 ## DONE
+
+### 2015-08-13
+
+- rename Students to Causes
+- rename cause-list and donation-list to <type>-tabular-list
+- rename management to mgmt (capitalized version too)
+- write student-to-cause db migration (don't forget studentId on donations)
+- create migration to rename students to causes in database
+- create forms symlink in node_modules
 
 ### 2015-08-11
 
