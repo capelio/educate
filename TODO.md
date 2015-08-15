@@ -51,8 +51,6 @@
 
 ## CONTENT
 
-- add How it Works content
-
 ## PROCESS
 
 - add calendar reminders for renewing/redownloading SSL certs
@@ -72,6 +70,10 @@
 - publish clean API for writing JSON to a append-only log, publish leveldb adapter
 
 ## DONE
+
+### 2015-08-15
+
+- add How it Works content
 
 ### 2015-08-14
 
