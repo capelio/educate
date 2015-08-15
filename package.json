@@ -43,12 +43,12 @@
   },
   "scripts": {
     "build": "NODE_ENV=production webpack",
-    "bump": "npm version minor",
-    "predeploy": "npm run test",
     "deploy": "npm run build && surge -p public -d https://liftupnepal.com",
-    "prerelease": "npm run test",
     "push": "git push --all && git push --tags",
-    "release": "npm run bump && npm run push && npm run deploy",
+    "release": "npm run push && npm run deploy",
+    "release-patch": "npm run test && npm version patch && npm run release",
+    "release-minor": "npm run test && npm version minor && npm run release",
+    "release-major": "npm run test && npm version major && npm run release",
     "start": "webpack-dev-server",
     "test": "standard"
   }
