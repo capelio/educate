@@ -51,7 +51,6 @@
 
 ## CONTENT
 
-- create a better logo
 - add How it Works content
 
 ## PROCESS
@@ -73,6 +72,10 @@
 - publish clean API for writing JSON to a append-only log, publish leveldb adapter
 
 ## DONE
+
+### 2015-08-14
+
+- create a better logo
 
 ### 2015-08-13
 
