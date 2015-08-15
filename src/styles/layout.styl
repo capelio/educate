@@ -1,0 +1,19 @@
+$logo-height = $space*2
+$centering-offset = $logo-height/3
+
+.top-nav li
+  position: relative
+  top: - $centering-offset
+
+.top-nav li.pull-right
+  top: $centering-offset
+
+.top-nav li.logo
+  position: static
+
+.logo img
+  height: $logo-height
+
+footer
+  border-top: 1px solid $gray-light
+  padding: $ui-padding-narrow
