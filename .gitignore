@@ -7,4 +7,5 @@ node_modules/*
 !node_modules/styles
 public
 *.log
+.DS_Store
 .exrc
