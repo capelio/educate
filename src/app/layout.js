@@ -64,11 +64,10 @@ export default React.createClass({
 
           <footer>
             <p>
-              <small>
-                Lift Up Nepal is powered by <a href='https://liftupjs.github.io/' target='_blank'>LiftUp.js</a>, a suite of free and open source fundraising tools focused on empowering grassroots activists around the world.
-                <br/>
-                Teamwork logo icon was created by <a href='https://thenounproject.com/factor_e/' target='_blank'>factor[e] design initiative</a>. Thanks factor[e]!
-              </small>
+              Lift Up Nepal is powered by <a href='https://liftupjs.github.io/' target='_blank'>LiftUp.js</a>, a suite of free and open source fundraising tools focused on empowering grassroots activists around the world.
+            </p>
+            <p>
+              Teamwork logo icon was created by <a href='https://thenounproject.com/factor_e/' target='_blank'>factor[e] design initiative</a>. Thanks factor[e]!
             </p>
           </footer>
         </div>
