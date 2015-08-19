@@ -15,7 +15,8 @@ export default React.createClass({
     const {causes} = this.props
 
     const unfundedCauses = causes.filter(cause => {
-      return cause.goal >= sum(cause.donations.models, 'amount')
+      const donated = sum(cause.donations.models, 'amount')
+      return cause.goal > donated
     })
 
     return (
