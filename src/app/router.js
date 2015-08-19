@@ -11,7 +11,7 @@ import CauseImagesMgmtPage from 'pages/cause-images-mgmt'
 import CauseProfileMgmtPage from 'pages/cause-profile-mgmt'
 import CausesPage from 'pages/causes'
 import DashboardPage from 'pages/dashboard'
-import DonationPage from 'pages/donation'
+import DonatePage from 'pages/donate'
 import DonationDetailsPage from 'pages/donation-details'
 import DonationFormPage from 'pages/donation-form'
 import HowItWorksPage from 'pages/how-it-works'
@@ -114,7 +114,7 @@ export default Router.extend({
           body: 'We encountered an error. Please wait a few minutes and try again. If the problem persists, please contact support.'
         })
       } else {
-        this.renderPage(<DonationPage cause={cause}/>)
+        this.renderPage(<DonatePage cause={cause}/>)
       }
     })
   },
