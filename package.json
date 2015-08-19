@@ -10,6 +10,7 @@
     "ampersand-router": "^3.0.2",
     "formatted-text": "^0.1.1",
     "local-links": "^1.4.0",
+    "lodash.assign": "^3.2.0",
     "lodash.sum": "^3.6.2",
     "moment": "^2.10.6",
     "node-uuid": "^1.4.3",

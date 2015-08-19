@@ -14,7 +14,6 @@
 - use the Express CORS module
 - collapse hamburger menu after item selection
 - delete student's old profile image when uploading a new one
-- improve flow when encountering an error when viewing a deeplinked page
 
 ## FEATURES
 
@@ -70,6 +69,10 @@
 - publish clean API for writing JSON to a append-only log, publish leveldb adapter
 
 ## DONE
+
+### 2015-08-19
+
+- improve flow when encountering an error when viewing a deeplinked page
 
 ### 2015-08-15
 
