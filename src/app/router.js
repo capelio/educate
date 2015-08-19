@@ -83,7 +83,6 @@ export default Router.extend({
           body: 'We encountered an error. Please wait a few minutes and try again. If the problem persists, please contact support.'
         })
       } else {
-        app.causes.each(cause => cause.donations.fetch())
         this.renderPage(<CausesPage causes={app.causes}/>)
       }
     })
@@ -102,7 +101,6 @@ export default Router.extend({
           body: 'We encountered an error. Please wait a few minutes and try again. If the problem persists, please contact support.'
         })
       } else {
-        cause.donations.fetch()
         this.renderPage(<CauseDetailsPage cause={cause}/>)
       }
     })
@@ -196,16 +194,8 @@ export default Router.extend({
           body: 'We encountered an error. Please wait a few minutes and try again. If the problem persists, please contact support.'
         })
       } else {
-        cause.donations.fetchById(id, (err, donation) => {
-          if (err) {
-            modal.open({
-              title: 'Error',
-              body: 'We encountered an error retrieving the donation. Please wait a few minutes and try again. If the problem persists, please contact support.'
-            })
-          } else {
-            this.renderPage(<DonationDetailsPage cause={cause} donation={donation}/>)
-          }
-        })
+        const donation = cause.donations.get(id)
+        this.renderPage(<DonationDetailsPage cause={cause} donation={donation}/>)
       }
     })
   },
@@ -218,16 +208,8 @@ export default Router.extend({
           body: 'We encountered an error. Please wait a few minutes and try again. If the problem persists, please contact support.'
         })
       } else {
-        cause.donations.fetchById(id, (err, donation) => {
-          if (err) {
-            modal.open({
-              title: 'Error',
-              body: 'We encountered an error retrieving the donation. Please wait a few minutes and try again. If the problem persists, please contact support.'
-            })
-          } else {
-            this.renderPage(<DonationFormPage cause={cause} donation={donation}/>)
-          }
-        })
+        const donation = cause.donations.get(id)
+        this.renderPage(<DonationFormPage cause={cause} donation={donation}/>)
       }
     })
   },
@@ -235,8 +217,6 @@ export default Router.extend({
   dashboard () {
     app.causes.fetch({
       success: () => {
-        app.causes.each(cause => cause.donations.fetch())
-
         this.renderPage(<DashboardPage causes={app.causes}/>)
       }
     })
