@@ -15,13 +15,11 @@ export default React.createClass({
           </figcaption>
         </figure>
 
-        <p>To the developed world, the power of education is well understood. In Nepal, however, this is a relatively new idea.</p>
+        <p>Education is power.  In Nepal we know this, but many of our children are prevented from going to school because they can’t afford it. In Nepal, public education is not free. The government charges tuition, a fee for the required school uniforms, a textbook fee, etc. in exchange for attendance. Many children’s families are not able to afford this luxury. Unfortunately, this situation has only gotten worse after the earthquake because thousands of children lost one or both of their parents, significantly reducing their family’s income, making attending school even more of an impossibility.</p>
 
-        <p>In Nepal, the promise of a free public education does not exist. A child's parents must supply both the child's yearly tuition along with uniforms and school supplies. As Nepal is one of the poorest countries in the world, this economic barrier prevents many Nepali children from ever attaining an education.</p>
+        <p>Our organization, “Lift Up Nepal”, was created to help tackle this problem. We certainly cannot replace those children’s parents who have died, but at least we can help fulfill their hope that their children continue attending school. To this end, we are asking for your support in giving these children a chance at a more hopeful and promising future.</p>
 
-        <p>After the earthquakes, the situation has only gotten worse. Families who lost one or both parents also lost the financial means to pay for school. Those who lost their homes also lost their belongings, including the uniforms and school supplies necessary to attend school. Many children previously attending school have been forced to drop out. The barrier for those hoping to begin attending school has risen even higher.</p>
-
-        <p>Our mission at Lift Up Nepal is to connect grassroots Nepali aid organizers with donors from around the world. Over 97% of every donated dollar goes directly to tuition, uniforms, and school supplies.</p>
+        <p>Please note, most of the students we support attend public schools, but on the rare occasion when an orphaned child has no one left to live with, we will pay to enroll them in a private boarding school so they can have a home and an education.</p>
       </div>
     )
   }
