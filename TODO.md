@@ -14,9 +14,17 @@
 - use the Express CORS module
 - collapse hamburger menu after item selection
 - delete student's old profile image when uploading a new one
+- increase contrast of main nav links
+- improve comment coverage, focus on open source audience
+- grab a user's token out of their request headers, instead of the request body, in the API's /signout endpoint
+- don't include the user's token in the request body when hitting the API's /signout endpoint
+- fix proportions on donate page, currently skewed toward the image
+- change forms/cause.js's onCancelClick to use manageProfileRoute
+- determine whether or not /signin and /signout invalidate tokens for other signed in users
 
 ## FEATURES
 
+- update UI to display cause natural keys as ID
 - rename cause.name to cause.title
 - rename cause profile to something less studenty
 - turn <type>-tabular-list into a reusable tabular-list
@@ -47,6 +55,8 @@
 - add Advanced tab to error modals, include stack, HTTP response codes, etc
 - devise a pattern for separating compositional components that need to know about styling from structural components
 - devise validation strategy that can be shared across client (models, forms) and API (express)
+- render Layout and other static bits server-side
+- combine Funding Progress / Donors section on a student's profile in a full width hero-like section
 
 ## CONTENT
 
@@ -69,6 +79,11 @@
 - publish clean API for writing JSON to a append-only log, publish leveldb adapter
 
 ## DONE
+
+### 2015-09-01
+
+- add auto-incrementing, human-readable natural key when creating a cause via the API
+- write database migration script to give all causes a natural key
 
 ### 2015-08-19
 
