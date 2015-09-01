@@ -23,7 +23,6 @@ export default React.createClass({
     const url = app.config.apiRoot + '/signout'
     request.post(url)
       .set('Authorization', app.me.token)
-      .send({ token: app.me.token })
       .end()
 
     // Clear the token from localStorage

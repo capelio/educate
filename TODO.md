@@ -15,10 +15,7 @@
 - collapse hamburger menu after item selection
 - delete student's old profile image when uploading a new one
 - improve comment coverage, focus on open source audience
-- grab a user's token out of their request headers, instead of the request body, in the API's /signout endpoint
-- don't include the user's token in the request body when hitting the API's /signout endpoint
 - fix proportions on donate page, currently skewed toward the image
-- determine whether or not /signin and /signout invalidate tokens for other signed in users
 
 ## FEATURES
 
@@ -84,6 +81,9 @@
 - update UI to display cause natural keys as ID
 - change forms/cause.js's onCancelClick to use manageProfileRoute
 - increase contrast of main nav links
+- grab a user's token out of their request headers, instead of the request body, in the API's /signout endpoint
+- don't include the user's token in the request body when hitting the API's /signout endpoint
+- determine whether or not /signin and /signout invalidate tokens for other signed in users
 
 ### 2015-08-19
 
