@@ -17,7 +17,7 @@ export default React.createClass({
 
   render () {
     const {cause, donations} = this.props
-    const {goal, manageProfileRoute} = cause
+    const {goal, manageProfileRoute, naturalKey} = cause
 
     const prettyDate = moment(cause.createdAt).format('DD MMM YYYY')
 
@@ -28,6 +28,9 @@ export default React.createClass({
 
     return (
       <tr>
+        <td>
+          {naturalKey}
+        </td>
         <td>
           {prettyDate}
         </td>

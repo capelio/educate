@@ -24,7 +24,6 @@
 
 ## FEATURES
 
-- update UI to display cause natural keys as ID
 - rename cause.name to cause.title
 - rename cause profile to something less studenty
 - turn <type>-tabular-list into a reusable tabular-list
@@ -84,6 +83,7 @@
 
 - add auto-incrementing, human-readable natural key when creating a cause via the API
 - write database migration script to give all causes a natural key
+- update UI to display cause natural keys as ID
 
 ### 2015-08-19
 

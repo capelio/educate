@@ -11,6 +11,7 @@ export default Model.extend(tokenMixin, {
 
   props: {
     id: 'string',
+    naturalKey: 'number',
     name: 'string',
     story: 'string',
     goal: 'number',
