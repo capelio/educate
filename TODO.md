@@ -14,7 +14,6 @@
 - use the Express CORS module
 - collapse hamburger menu after item selection
 - delete student's old profile image when uploading a new one
-- increase contrast of main nav links
 - improve comment coverage, focus on open source audience
 - grab a user's token out of their request headers, instead of the request body, in the API's /signout endpoint
 - don't include the user's token in the request body when hitting the API's /signout endpoint
@@ -84,6 +83,7 @@
 - write database migration script to give all causes a natural key
 - update UI to display cause natural keys as ID
 - change forms/cause.js's onCancelClick to use manageProfileRoute
+- increase contrast of main nav links
 
 ### 2015-08-19
 
