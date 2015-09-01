@@ -19,7 +19,6 @@
 - grab a user's token out of their request headers, instead of the request body, in the API's /signout endpoint
 - don't include the user's token in the request body when hitting the API's /signout endpoint
 - fix proportions on donate page, currently skewed toward the image
-- change forms/cause.js's onCancelClick to use manageProfileRoute
 - determine whether or not /signin and /signout invalidate tokens for other signed in users
 
 ## FEATURES
@@ -84,6 +83,7 @@
 - add auto-incrementing, human-readable natural key when creating a cause via the API
 - write database migration script to give all causes a natural key
 - update UI to display cause natural keys as ID
+- change forms/cause.js's onCancelClick to use manageProfileRoute
 
 ### 2015-08-19
 

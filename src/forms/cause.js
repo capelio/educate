@@ -74,6 +74,7 @@ export default React.createClass({
   },
 
   render () {
+    const {id, manageProfileRoute} = this.props.cause
     const {goal, name, story} = this.state
 
     let prettyGoal = '$' + (goal ? goal : '')
@@ -99,8 +100,7 @@ export default React.createClass({
           </div>
 
           <button type='submit' className='button button-approve'>Save</button>&nbsp;
-          <button onClick={this.onCancelClick} type='button' className='button button-neutral'>Cancel</button>
-
+          <a href={id ? manageProfileRoute : '/dashboard'} className='button button-neutral'>Cancel</a>
         </fieldset>
       </form>
     )
