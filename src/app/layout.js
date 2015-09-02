@@ -38,6 +38,22 @@ export default React.createClass({
     }
   },
 
+  renderSignInMenu () {
+    if (app.me.isAuthenticated) {
+      return <a href='' onClick={this.onSignOut}>Sign Out</a>
+    } else {
+      return <a href='/signin'>Sign In</a>
+    }
+  },
+
+  renderAccountMenu () {
+    if (app.me.isAuthenticated) {
+      return <li className='pull-right'><a href='/dashboard'>Dashboard</a></li>
+    } else {
+      return ''
+    }
+  },
+
   render () {
     const {isAuthenticated} = app.me
 
@@ -53,8 +69,9 @@ export default React.createClass({
             </li>
             <li><a href='/'>Students in Need</a></li>
             <li><a href='/howitworks'>How it Works</a></li>
-            <li className='pull-right'>{isAuthenticated ? <a href='' onClick={this.onSignOut}>Sign Out</a> : <a href='/signin'>Sign In</a>}</li>
-            {isAuthenticated ? <li className='pull-right'><a href='/dashboard'>Dashboard</a></li> : ''}
+
+            <li className='pull-right'>{this.renderSignInMenu()}</li>
+            {this.renderAccountMenu()}
           </ul>
         </nav>
 

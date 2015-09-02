@@ -5,7 +5,6 @@
 - don't persist empty-string email addresses when saving donations
 - split modal error objects into their own file
 - pull updateability out of the profile image and into its own component
-- pull signInLink and accountMenu logic into their own render functions in layout
 - change image tap action to view full size image
 - when focusing $ fields, place cursor after $ character
 - add validation to forms
@@ -84,6 +83,7 @@
 - grab a user's token out of their request headers, instead of the request body, in the API's /signout endpoint
 - don't include the user's token in the request body when hitting the API's /signout endpoint
 - determine whether or not /signin and /signout invalidate tokens for other signed in users
+- pull signInLink and accountMenu logic into their own render functions in layout
 
 ### 2015-08-19
 
