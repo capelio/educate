@@ -11,7 +11,7 @@ export default React.createClass({
         <figure className='media-outlined pull-right'>
           <img src={kidsImage} alt='Smiling Nepali children'/>
           <figcaption>
-            Credit <a href='https://flic.kr/p/p1dbJL' target='_blank'>Matt Zimmerman</a> (<a href='https://creativecommons.org/licenses/by/2.0/' target='_blank'>CC BY 2.0</a>)
+            Credit Matt Zimmerman (CC BY 2.0)
           </figcaption>
         </figure>
 

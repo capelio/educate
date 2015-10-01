@@ -55,8 +55,6 @@ export default React.createClass({
   },
 
   render () {
-    const {isAuthenticated} = app.me
-
     return (
       <NavHelper>
         <nav className='top-nav top-nav-dark cf' role='navigation'>
